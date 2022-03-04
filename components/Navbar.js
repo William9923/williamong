@@ -17,7 +17,6 @@ const menuMaps = {
 
 export default function Navbar() {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -78,9 +77,6 @@ const Menu = ({ link, title, router }) => (
         }`}
     >
       {title + " "}
-      {router.asPath === link && (
-        <ArrowDown width={16} height={16} />
-      )}
     </a>
   </Link>
 )
