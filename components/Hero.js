@@ -2,14 +2,13 @@ import React from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
+import { Divider } from "./Divider";
 
 export default function Hero() {
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
-      {/* Text container */}
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-1/2 mx-auto text-center md:text-left lg:pt-10">
-        {/* <div className="md:flex-row justify-between"> */}
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-1/2 sm:w-1/4 mx-auto text-center md:text-left lg:pt-10">
         <RoughNotationGroup show={true}>
           <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black dark:text-white">
             Hey, I’m{" "}
