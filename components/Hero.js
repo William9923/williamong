@@ -4,6 +4,13 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 import colors from "@constants/colors"
 
+const profileDetails = [
+  "🖥 I’m a developer, engineer, and a student.",
+  "📌 Currently on my last year (fourth year) in ITB. ",
+  "🗒 I previously work at Tokopedia as a Software Engineer Intern",
+  "🔨 Love to automate things"
+]
+
 export default function Hero() {
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
@@ -25,17 +32,13 @@ export default function Hero() {
 
           <div className="">
             <h2 className="text-gray-600 text-left dark:text-gray-400 ml-4 mb-16 mt-4 font-light tracking-wide leading-normal">
-              🖥 I’m a developer, engineer, and a student. <br />
-              📌 Currently on my last year (fourth year) in ITB. <br />
-              🗒 I previously work at{" "}
-              <span className="font-bold">
-                <span className="text-blue-500">Tokopedia</span>
-              </span>{" "}
-              as a{" "}
-              <span className="dark:text-white font-bold">
-                Software Engineer Intern.{" "}
-              </span>{" "}<br />
-              🔨 Love to automate things{" "}
+              {profileDetails.map((detail, idx) => (
+                <>
+                <span key={idx}>{detail}</span> 
+                <br/>
+                </>
+                
+              ))}
             </h2>
           </div>
 

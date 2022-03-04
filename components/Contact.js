@@ -1,8 +1,5 @@
 import React from "react";
 import PageTitle from "./PageTitle";
-import HoverCard from "./HoverCard";
-import EmailContactForm from "./EmailContactForm";
-import { GithubLogo } from "./logo";
 
 const pageKey = 3
 const title = "Contact Me!"
@@ -45,7 +42,7 @@ const WhatsAppContactInfo = ({ phoneNumber }) => (
       className="mt-4 px-4 text-center w-full font-bold h-8 bg-green-400 dark:bg-green-400 text-gray-900 py-1 dark:text-gray-900 rounded"
       type="submit"
     >
-      Chat on WhatsApp
+      Chat on WhatsApp 💬
     </a>
   </div>
 )
@@ -53,7 +50,7 @@ const WhatsAppContactInfo = ({ phoneNumber }) => (
 const EmailContactInfo = ({ email }) => (
   <div className="flex flex-col mx-5 px-5">
     <h5 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100">
-      Feel free to drop an email to me if you are interested to hire me! 
+      Feel free to drop an email to me if you are interested to hire me!
     </h5>
     <p className="my-1 text-gray-800 dark:text-gray-200">
       We can discuss about my skills and wether it will help your company/project!.
@@ -64,7 +61,7 @@ const EmailContactInfo = ({ email }) => (
       className="mt-4 px-4 text-center w-full font-bold h-8 bg-blue-400 dark:bg-blue-400 text-gray-900 py-1 dark:text-gray-900 rounded"
       type="submit"
     >
-      Go to Email
+      Go to Email ✈️
     </a>
   </div>
 )
