@@ -11,16 +11,18 @@ export default function Footer() {
       <div className="max-w-6xl  mx-auto px-4 my-10 py-10 md:pb-20">
         <div className="flex flex-col space-y-4 justify-center items-center mt-8">
           <div className="text-xl">
-            <p>Copyright &copy; {new Date().getFullYear()} <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
-              <a
-                className="hover:bg-blue-500 rounded-md px-2 py-1  hover:text-gray-50"
-                href="https://manuarora.in"
-              >
-                William
-              </a>
-            </div></p>
+            <p>Copyright &copy; {new Date().getFullYear()} 
+              <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
+                <a
+                  className="hover:bg-blue-500 rounded-md px-2 py-1  hover:text-gray-50"
+                  href="https://manuarora.in"
+                >
+                  William
+                </a>
+              </div>
+            </p>
           </div>
-          <p className="text-lg">
+          <div className="text-lg">
             Created with {" "} 
               <span className="inline-block"> 
                 <ReactLogo width={20} height={20} /> 
@@ -36,9 +38,9 @@ export default function Footer() {
 
             <br />
             and a small pinch of with 💛   
-          </p>
+          </div>
           <div></div>
-          <p className="text-sm">
+          <div className="text-sm">
             Template heavily inspired from
             <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
               <a
@@ -48,35 +50,12 @@ export default function Footer() {
                 Manu Arora
               </a>
             </div>
-          </p>
-          <div className="py-8">
           </div>
-
           {/* Refactor from here  */}
           <div className="space-x-4 flex flex-row items-center">
-
             <GithubLogo width={30} height={30} />
-            <LinkedInLogo width={30} height={30} />
-            <WhatsappLogo width={30} height={30} />
-
-            {/* <a
-              href={userData.socialLinks.instagram}
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
-            >
-              <GithubLogo width={16} height={16} />
-            </a>
-            <a
-              href={userData.socialLinks.twitter}
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
-            >
-              <LinkedInLogo width={16} height={16} />
-            </a>
-            <a
-              href={userData.socialLinks.linkedin}
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
-            >
-              <WhatsappLogo width={16} height={16} />
-            </a> */}
+             <LinkedInLogo width={30} height={30} />
+            <WhatsappLogo width={30} height={30} /> 
           </div>
           {/* End Refactor */}
         </div>
