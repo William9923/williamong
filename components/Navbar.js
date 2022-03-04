@@ -4,9 +4,9 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
 
-import { ArrowDown } from "./logo"
+import { ArrowDown, HomeIcon } from "./logo"
 
-
+// TODO: adjust menu based on need...
 const menu = ["/blogs", "/experience", "/projects", "/contacts"]
 const menuMaps = {
   "/blogs": "Blogs",
@@ -25,11 +25,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
+    <div className="max-w-6xl  mx-auto md:px-4 py-10 md:py-20">
       <div className="flex md:flex-row justify-between items-center ">
 
-        <div className="block md:hidden" >
-          {/* To make the menu in the right side */}
+        <div className="block md:hidden ml-4" >
+          <Link href="/">
+            <HomeIcon width={30} height={30} />
+          </Link>
+
         </div>
 
         <div className="hidden md:block" >
@@ -45,7 +48,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-
         <div className="flex flex-col justify-between items-end">
           <div className="space-x-8 hidden md:block">
             {menu.map((link) => (
@@ -58,9 +60,9 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-        <div className="hidden md:block" >
+        {/* <div className="hidden md:block" >
           <ToggleButton theme={theme} mounted={mounted} onclick={() => setTheme(theme === "dark" ? "light" : "dark")} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -69,9 +71,10 @@ export default function Navbar() {
 const Menu = ({ link, title, router }) => (
   <Link href={link}>
     <a
-      className={`text-base  ${router.asPath === link
-        ? "text-gray-800 font-bold dark:text-gray-400"
-        : "text-gray-600 dark:text-gray-300 font-normal "
+      className={`text-base  
+        ${router.asPath === link
+          ? "text-gray-800 font-bold dark:text-gray-400"
+          : "text-gray-600 dark:text-gray-300 font-normal "
         }`}
     >
       {title + " "}
@@ -97,11 +100,11 @@ const ToggleButton = ({ onclick, mounted, theme }) => (
     className="w-10 h-10 p-3 rounded focus:outline-none"
     onClick={onclick}
   >
-    {mounted && (theme === "dark" ? (<DarkThemeButton />) : <LightThemeButton />)}
+    {mounted && (theme === "dark" ? (<DarkThemeIcon />) : <LightThemeIcon />)}
   </button>
 )
 
-const LightThemeButton = () => (
+const LightThemeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -118,7 +121,7 @@ const LightThemeButton = () => (
   </svg>
 )
 
-const DarkThemeButton = () => (
+const DarkThemeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
