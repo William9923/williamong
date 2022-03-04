@@ -1,6 +1,11 @@
 {
-  "name": "nextjs",
+  "name": "willz-home",
+  "description": "William personal website (portofolio)",
   "version": "0.1.0",
+  "author": {
+    "name": "William",
+    "email": "williamong1400@gmail.com"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,8 +22,9 @@
     "react-rough-notation": "^1.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+    "@tailwindcss/typography": "^0.5.0-alpha.3",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23"
   }
 }

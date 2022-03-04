@@ -1,23 +1,23 @@
 import userData from "@constants/data";
+
 import React from "react";
 
 import PageTitle from "./PageTitle";
 
+const pageKey = 1
 const title = "Experience."
 const quotes = "Some quotes..."
 export default function Experience() {
   return (
     <section className="bg-white">
       <div className="max-w-6xl mx-auto h-48 bg-white">
-        <PageTitle title={title} quotes={quotes} />
+        <PageTitle pageKey={pageKey} title={title} quotes={quotes} />
       </div>
       <div className="bg-white dark:bg-gray-900 -mt-4">
         <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
-          {/* Experience card */}
           {userData.experience.map((exp, idx) => (
-            <>
+            <div key={idx}>
               <ExperienceCard
-                key={idx}
                 title={exp.title}
                 desc={exp.desc}
                 year={exp.year}
@@ -32,7 +32,7 @@ export default function Experience() {
                   <div className="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"></div>
                 </div>
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>

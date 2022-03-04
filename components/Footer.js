@@ -1,14 +1,12 @@
 import React from "react";
-
-import userData from "@constants/data";
 import { ReactLogo, GithubLogo, WhatsappLogo, LinkedInLogo, TailwindLogo, NextJsLogo  } from "./logo";
 
-import {Divider} from "./Divider"
+const name = "William"
 
 export default function Footer() {
   return (
     <>
-      <div className="max-w-6xl  mx-auto px-4 my-10 py-10 md:pb-20">
+      <div className="max-w-6xl mx-auto px-4 md:py-20">
         <div className="flex flex-col space-y-4 justify-center items-center mt-8">
           <div className="text-xl">
             <p>Copyright &copy; {new Date().getFullYear()} 
@@ -17,7 +15,7 @@ export default function Footer() {
                   className="hover:bg-blue-500 rounded-md px-2 py-1  hover:text-gray-50"
                   href="https://manuarora.in"
                 >
-                  William
+                  {name}
                 </a>
               </div>
             </p>
@@ -54,7 +52,7 @@ export default function Footer() {
           {/* Refactor from here  */}
           <div className="space-x-4 flex flex-row items-center">
             <GithubLogo width={30} height={30} />
-             <LinkedInLogo width={30} height={30} />
+            <LinkedInLogo width={30} height={30} />
             <WhatsappLogo width={30} height={30} /> 
           </div>
           {/* End Refactor */}

@@ -2,8 +2,8 @@ import React from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
+import colors from "@constants/colors"
 
-const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
 export default function Hero() {
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">

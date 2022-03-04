@@ -7,12 +7,12 @@ import userData from "@constants/data";
 import { ArrowDown, HomeIcon } from "./logo"
 
 // TODO: adjust menu based on need...
-const menu = ["/blogs", "/experience", "/projects", "/contacts"]
+const menu = ["/blogs", "/experience", "/projects", "/contact"]
 const menuMaps = {
   "/blogs": "Blogs",
   "/experience": "Experience",
   "/projects": "Projects",
-  "/contacts": "Contacts",
+  "/contact": "Contacts",
 }
 
 export default function Navbar() {
@@ -29,9 +29,10 @@ export default function Navbar() {
 
         <div className="block md:hidden ml-4" >
           <Link href="/">
-            <HomeIcon width={30} height={30} />
+            <a>
+              <HomeIcon width={30} height={30} />
+            </a>
           </Link>
-
         </div>
 
         <div className="hidden md:block" >
@@ -49,19 +50,16 @@ export default function Navbar() {
 
         <div className="flex flex-col justify-between items-end">
           <div className="space-x-8 hidden md:block">
-            {menu.map((link) => (
-              <Menu link={link} title={menuMaps[link]} router={router} />
+            {menu.map((link, index) => (
+              <Menu key={index} link={link} title={menuMaps[link]} router={router} />
             ))}
           </div>
           <div className="space-x-4 block md:hidden">
-            {menu.map((link) => (
-              <SmallMenu link={link} title={menuMaps[link]} />
+            {menu.map((link, index) => (
+              <SmallMenu key={index} link={link} title={menuMaps[link]} />
             ))}
           </div>
         </div>
-        {/* <div className="hidden md:block" >
-          <ToggleButton theme={theme} mounted={mounted} onclick={() => setTheme(theme === "dark" ? "light" : "dark")} />
-        </div> */}
       </div>
     </div>
   );
