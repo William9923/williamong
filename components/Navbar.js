@@ -25,8 +25,7 @@ export default function Navbar() {
   return (
     <div className="max-w-6xl mx-auto md:px-4 py-10 md:py-20">
       <div className="flex md:flex-row justify-between items-center ">
-
-        <div className="block md:hidden ml-4" >
+        <div className="hover:scale-110 block md:hidden ml-4" >
           <Link href="/">
             <a>
               <FiHome size={30} />
@@ -34,7 +33,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden md:block" >
+        <div className="hover:scale-110 hidden md:block" >
           <Link href="/">
             <a>
               <h1 className="font-semibold text-xl dark:text-gray-100">
@@ -66,23 +65,29 @@ export default function Navbar() {
 
 const Menu = ({ link, title, router }) => (
   <Link href={link}>
-    <a
-      className={`text-base  
+    <button className="inline-block hover:scale-110">
+      <a
+        className={`text-base   
         ${router.asPath === link
-          ? "text-gray-800 font-bold dark:text-gray-400"
-          : "text-gray-600 dark:text-gray-300 font-normal "
-        }`}
-    >
-      {title + " "}
-    </a>
+            ? "text-gray-800 font-bold dark:text-gray-400"
+            : "text-gray-600 dark:text-gray-300 font-normal "
+          }`}
+      >
+        {title + " "}
+      </a>
+    </button>
+
   </Link>
 )
 
 const SmallMenu = ({ link, title }) => (
   <Link href={link}>
-    <a className="text-base font-normal text-gray-600 dark:text-gray-300">
-      {title}
-    </a>
+    <button className="inline-block hover:scale-110">
+      <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+        {title}
+      </a>
+    </button>
+
   </Link>
 )
 

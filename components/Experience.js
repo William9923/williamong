@@ -2,7 +2,7 @@
 import React from "react";
 import userData from "@constants/data";
 import PageTitle from "@components/PageTitle";
-import { HoverItem } from "@components/ui/HoverItem"
+import { HoverItemGreen } from "@components/ui/HoverItem"
 
 
 const title = "Experience."
@@ -49,11 +49,11 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) =
         {year}
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
-      <HoverItem color="blue">
-        <a href={companyLink} className="text-gray-500">
+      <HoverItemGreen>
+        <a href={companyLink} className="text-gray-500 hover:text-gray-50">
           {company}
         </a>
-      </HoverItem>
+      </HoverItemGreen>
       <span className="text-gray-500">
         {duration}
       </span>

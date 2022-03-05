@@ -1,7 +1,6 @@
 import React from "react";
 import { AiOutlineGithub, AiFillEye } from "react-icons/ai";
 
-
 export default function ProjectCard({ title, desc, link, imgUrl, tags }) {
     return (
         <div className="group mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">

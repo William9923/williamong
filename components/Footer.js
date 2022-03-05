@@ -3,7 +3,7 @@ import { FiGithub, FiTwitter, FiSlack, FiLinkedin } from "react-icons/fi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
 
-import { HoverItem } from "@components/ui/HoverItem";
+import { HoverItemBlue, HoverItemRed } from "@components/ui/HoverItem";
 
 import { ReactLogo, TailwindLogo, NextJsLogo } from "@components/logo";
 
@@ -19,14 +19,14 @@ export default function Footer() {
       <div className="flex flex-col space-y-4 justify-center items-center mt-8">
         <div className="text-xl">
           <p>Copyright &copy; {new Date().getFullYear()}
-            <HoverItem color="blue">
+            <HoverItemBlue >
               <a
-                className="rounded-md px-2 py-1"
+                className="rounded-md px-2 py-1 hover:text-gray-50"
                 href={link}
               >
                 {name}
               </a>
-            </HoverItem>
+            </HoverItemBlue>
           </p>
         </div>
         <div className="text-lg">
@@ -39,20 +39,18 @@ export default function Footer() {
         <div></div>
         <div className="text-sm">
           Template heavily inspired from
-          <HoverItem color="red">
+          <HoverItemRed>
             <a
               className="rounded-md px-2 py-1 hover:text-gray-50"
               href="https://manuarora.in"
             >
               Manu Arora
             </a>
-          </HoverItem>
+          </HoverItemRed>
         </div>
         <div className="space-x-4 flex flex-row items-center">
           {canConnectWith.map((method, idx) => (
-            <HoverItem key={idx} color="red">
-              <ConnectMethod key={idx} method={method} link={"https://google.com"} />
-            </HoverItem>
+            <ConnectMethod key={idx} method={method} link={"https://google.com"} />
           ))}
         </div>
       </div>
@@ -84,6 +82,7 @@ const ConnectMethod = ({ method, link }) => {
   return <a
     href={link}
     target="_blank"
+    className="hover:scale-110"
   >
     {component != null && component}
   </a>

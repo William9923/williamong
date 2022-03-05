@@ -35,7 +35,7 @@ const WhatsAppContactInfo = ({ phoneNumber }) => (
     <a
       href={`https://wa.me/${phoneNumber}?text=I want to hire/learn more about you!`}
       target="_blank"
-      className="mt-4 px-4 text-center w-full font-bold h-8 bg-green-400 dark:bg-green-400 text-gray-900 py-1 dark:text-gray-900 rounded"
+      className="hover:scale-110 mt-4 px-4 text-center w-full font-bold h-8 bg-green-400 dark:bg-green-400 text-gray-900 py-1 dark:text-gray-900 rounded"
       type="submit"
     >
       Chat on WhatsApp 💬
@@ -54,7 +54,7 @@ const EmailContactInfo = ({ email }) => (
     <a
       href={`mailto:${email}?subject=I want to hire/learn more about you!`}
       target="_blank"
-      className="mt-4 px-4 text-center w-full font-bold h-8 bg-blue-400 dark:bg-blue-400 text-gray-900 py-1 dark:text-gray-900 rounded"
+      className="hover:scale-110 mt-4 px-4 text-center w-full font-bold h-8 bg-blue-400 dark:bg-blue-400 text-gray-900 py-1 dark:text-gray-900 rounded"
       type="submit"
     >
       Go to Email ✈️
