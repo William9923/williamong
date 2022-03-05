@@ -4,16 +4,16 @@ import { useRouter } from "next/router";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 
+const meta = {
+  title: "William - Software Engineer",
+  description: `I've been developing software system from 2020 and will keep learning. Get in touch with me to know more about my journey...`,
+  image: "/profile-edit.jpg",
+  type: "website"
+}
+
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
-  const meta = {
-    title: "Manu Arora - Developer, Writer, Creator and YouTuber",
-    description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
-    image: "/avatar.png",
-    type: "website",
-    ...customMeta,
-  };
   return (
     <div>
       <Head>

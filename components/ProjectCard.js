@@ -12,12 +12,12 @@ export default function ProjectCard({ title, desc, link, imgUrl, tags }) {
                         alt={title}
                     >
                     </img>
-                    <button className="absolute top-24 left-32 hidden group-hover:block w-12 h-12 opacity-60 rounded-full bg-white color-black px-2">
+                    <button className="absolute top-24 left-32 hidden group-hover:block w-12 h-12 opacity-60 hover:opacity-75 hover:scale-110 rounded-full bg-white color-black px-2">
                         <TransparentRedirectButton link={link}>
                             <AiOutlineGithub size={32} />
                         </TransparentRedirectButton>
                     </button>
-                    <button className="absolute top-24 right-32 hidden group-hover:block w-12 h-12 opacity-60 rounded-full bg-white color-black px-2">
+                    <button className="absolute top-24 right-32 hidden group-hover:block w-12 h-12 opacity-60 hover:opacity-75 hover:scale-110 rounded-full bg-white color-black px-2">
                         <TransparentRedirectButton link={link}>
                             <AiFillEye size={32} />
                         </TransparentRedirectButton>

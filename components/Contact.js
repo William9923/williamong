@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitle from "@components/PageTitle";
+import Divider from "@components/Divider";
 
 const title = "Contact Me!"
 const quotes = "Lets talk about anything! Or Hire Me!"
@@ -20,6 +21,7 @@ export default function Contact() {
         </div>
       </div>
 
+      <Divider />
     </section>
   );
 }
