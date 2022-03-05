@@ -1,11 +1,13 @@
-import userData from "@constants/data";
 
 import React from "react";
+import userData from "@constants/data";
+import PageTitle from "@components/PageTitle";
+import { HoverItem } from "@components/ui/HoverItem"
 
-import PageTitle from "./PageTitle";
 
 const title = "Experience."
 const quotes = "Some quotes..."
+
 export default function Experience() {
   return (
     <section className="bg-white">
@@ -22,8 +24,9 @@ export default function Experience() {
                 year={exp.year}
                 company={exp.company}
                 companyLink={exp.companyLink}
+                colors="green"
               />
-              {idx === userData.experience.length - 1 ? null : (
+              {checkLastElem(idx, userData.experience) ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
                   <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
                     <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
@@ -39,17 +42,18 @@ export default function Experience() {
   );
 }
 
-// TODO: create onclick open modal... (with headless UI)
 const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) => {
   return (
-    <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4">
+    <div className="relative experience-card border p-4 bg-white dark:bg-gray-800 z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
       <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800">
         {year}
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
-      <a href={companyLink} className="text-gray-500">
-        {company}
-      </a>
+      <HoverItem color="blue">
+        <a href={companyLink} className="text-gray-500">
+          {company}
+        </a>
+      </HoverItem>
       <span className="text-gray-500">
         {duration}
       </span>
@@ -57,3 +61,5 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) =
     </div>
   );
 };
+
+const checkLastElem = (idx, arr) => idx === arr.length - 1
