@@ -6,6 +6,7 @@ export default function projects() {
   return (
     <ContainerBlock title="Projects - Manu Arora">
       <Projects />
+      {/* Coming soon projects... */}
     </ContainerBlock>
   );
 }

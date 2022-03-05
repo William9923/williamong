@@ -6,6 +6,8 @@ export default function contact() {
   return (
     <ContainerBlock>
       <Contact />
+      {/* Subscribe (Coming soon...) */}
+      {/* Connect with me...  (medium, linked in, github, slack)*/}
     </ContainerBlock>
   );
 }

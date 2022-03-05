@@ -1,9 +1,11 @@
 import React from "react";
+
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
+import { RainbowHighlight } from "@components/RainbowHighlight";
 import userData from "@constants/data";
 import colors from "@constants/colors"
 
+const name = "William"
 const profileDetails = [
   "🖥 I’m a developer, engineer, and a student.",
   "📌 Currently on my last year (fourth year) in ITB. ",
@@ -19,7 +21,7 @@ export default function Hero() {
           <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black dark:text-white">
             Hey, I’m{" "}
             <RainbowHighlight color={colors[2]}>
-              <span className="dark:text-black">William.</span>
+              <span className="dark:text-black">{name}</span>
             </RainbowHighlight>{" "}
           </h1>
 
@@ -30,17 +32,14 @@ export default function Hero() {
             </RainbowHighlight>
           </h1>
 
-          <div className="">
+          <div>
             <h2 className="text-gray-600 text-left dark:text-gray-400 ml-4 mb-16 mt-4 font-light tracking-wide leading-normal">
               {profileDetails.map((detail, idx) => (
                 <span key={idx}>{detail}<br /></span>
               ))}
             </h2>
           </div>
-
-
         </RoughNotationGroup>
-        {/* </div> */}
 
       </div>
 
@@ -48,23 +47,29 @@ export default function Hero() {
         <img src={userData.avatarUrl} alt="avatar" className="drop-shadow-lg" />
         <div className="flex flex-row justify-center mt-4">
           <div className="flex flex-row space-x-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-arrow-90deg-up"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
-              />
-            </svg>
-            <p className="font-mono">That's me (before pandemic 😊)</p>
+            <LeftToUpperArrowIcon />
+            <p className="font-mono">Yup, That's me!</p>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+const LeftToUpperArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="currentColor"
+    className="bi bi-arrow-90deg-up"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fillRule="evenodd"
+      d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
+    />
+  </svg>
+)
+
+
