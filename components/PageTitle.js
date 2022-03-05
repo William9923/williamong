@@ -1,8 +1,8 @@
 import React from "react";
-import colors from "@constants/colors";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./ui/RainbowHighlight";
 
+import { RainbowHighlight } from "@components/ui/RainbowHighlight";
+import colors from "@constants/colors";
 export default function PageTitle({ title, quotes }) {
     return (
         <>

@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerBlock from "../components/ContainerBlock";
-import Contact from "../components/Contact";
+import ContainerBlock from "@components/ContainerBlock";
+import Blogs from "@components/Blogs"
 
 export default function blogs() {
   return (
     <ContainerBlock>
-      <Contact />
+      <Blogs />
     </ContainerBlock>
   );
 }

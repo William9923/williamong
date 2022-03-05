@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         <div className="space-x-4 flex flex-row items-center">
           {canConnectWith.map((method, idx) => (
-            <HoverItem color="red">
+            <HoverItem key={idx} color="red">
               <ConnectMethod key={idx} method={method} link={"https://google.com"} />
             </HoverItem>
           ))}

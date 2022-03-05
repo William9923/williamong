@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import userData from "@constants/data";
+import { FiHome } from "react-icons/fi"
 
-import { ArrowDown, HomeIcon } from "./logo"
+
+import { HomeIcon } from "./logo"
+import userData from "@constants/data";
 
 // TODO: adjust menu based on need...
 const menu = ["/blogs", "/experience", "/projects", "/contact"]
@@ -30,7 +31,7 @@ export default function Navbar() {
         <div className="block md:hidden ml-4" >
           <Link href="/">
             <a>
-              <HomeIcon width={30} height={30} />
+              <FiHome size={30} />
             </a>
           </Link>
         </div>
