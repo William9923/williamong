@@ -17,7 +17,7 @@ export default function Experience() {
       <div className="bg-white dark:bg-gray-900 -mt-4">
         <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
           {userData.experience.map((exp, idx) => (
-            <div key={idx}>
+            <div className="hover:scale-110" key={idx}>
               <ExperienceCard
                 title={exp.title}
                 desc={exp.desc}

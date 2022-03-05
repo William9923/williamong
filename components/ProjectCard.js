@@ -3,7 +3,7 @@ import { AiOutlineGithub, AiFillEye } from "react-icons/ai";
 
 export default function ProjectCard({ title, desc, link, imgUrl, tags }) {
     return (
-        <div className="group mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
+        <div className="group mb-4 shadow-xl hover:shadow hover:scale-105 rounded-md shadow-custom border-2 border-[#212121]">
             {(imgUrl != "" && imgUrl != undefined) && (
                 <div className="relative overflow-hidden">
                     <img
@@ -32,7 +32,7 @@ export default function ProjectCard({ title, desc, link, imgUrl, tags }) {
             </div>
             <div className="px-6 pt-4 pb-2">
                 {(tags != undefined && tags.length > 0) && tags.map((tag, idx) => (
-                    <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+                    <button key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:scale-110">#{tag}</button>
                 ))}
             </div>
         </div>
