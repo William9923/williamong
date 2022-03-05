@@ -5,7 +5,7 @@ import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
 
 import { HoverItem } from "@components/ui/HoverItem";
 
-import { ReactLogo, TailwindLogo, NextJsLogo } from "./logo";
+import { ReactLogo, TailwindLogo, NextJsLogo } from "@components/logo";
 
 // TODO: Make data dyanamic (fetch from data store...)
 const name = "William"

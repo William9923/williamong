@@ -1,5 +1,6 @@
 import React from "react";
-import PageTitle from "./PageTitle";
+import PageTitle from "@components/PageTitle";
+import ComingSoon from "@components/ComingSoon";
 
 const title = "Blogs"
 const quotes = "Because learning from the past is the key to the future"
@@ -9,8 +10,9 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto h-48 bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
-
-     {/* Coming Soon Component... */}
+      <div className="flex flex-col justify-center">
+        <ComingSoon />
+      </div>
     </section>
   );
 }

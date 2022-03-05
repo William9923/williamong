@@ -3,8 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FiHome } from "react-icons/fi"
 
-
-import { HomeIcon } from "./logo"
 import userData from "@constants/data";
 
 // TODO: adjust menu based on need...
