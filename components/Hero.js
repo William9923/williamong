@@ -33,11 +33,7 @@ export default function Hero() {
           <div className="">
             <h2 className="text-gray-600 text-left dark:text-gray-400 ml-4 mb-16 mt-4 font-light tracking-wide leading-normal">
               {profileDetails.map((detail, idx) => (
-                <>
-                <span key={idx}>{detail}</span> 
-                <br/>
-                </>
-                
+                <span key={idx}>{detail}<br /></span>
               ))}
             </h2>
           </div>

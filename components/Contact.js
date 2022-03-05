@@ -1,26 +1,22 @@
 import React from "react";
 import PageTitle from "./PageTitle";
 
-const pageKey = 3
 const title = "Contact Me!"
 const quotes = "Lets talk about anything! Or Hire Me!"
-
 export default function Contact() {
   return (
     <section className="bg-white flex flex-col justify-center">
       <div className="max-w-6xl mx-auto h-48 bg-white">
-        <PageTitle pageKey={pageKey} title={title} quotes={quotes} />
+        <PageTitle title={title} quotes={quotes} />
       </div>
 
       <div className="flex flex-row my-10">
         <div className="w-1/2 text-left">
           <EmailContactInfo email={"williamong1400@gmail.com"} />
-
         </div>
 
         <div className="w-1/2 text-right">
           <WhatsAppContactInfo phoneNumber={"6282112411431"} />
-
         </div>
       </div>
 
@@ -37,7 +33,7 @@ const WhatsAppContactInfo = ({ phoneNumber }) => (
       Drop your message and let's discuss about anything.
     </p>
     <a
-      href={`https://wa.me/${phoneNumber}?text=I want to learn more about you!`}
+      href={`https://wa.me/${phoneNumber}?text=I want to hire/learn more about you!`}
       target="_blank"
       className="mt-4 px-4 text-center w-full font-bold h-8 bg-green-400 dark:bg-green-400 text-gray-900 py-1 dark:text-gray-900 rounded"
       type="submit"

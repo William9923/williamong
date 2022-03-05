@@ -3,11 +3,11 @@ import colors from "@constants/colors";
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 
-export default ({ pageKey, title, quotes }) => (
+export default ({ title, quotes }) => (
     <>
         <RoughNotationGroup show={true}>
             <h1 className=" text-5xl md:text-7xl font-bold md:py-15 sm:py-5 text-center">
-                <RainbowHighlight color={colors[pageKey]}>
+                <RainbowHighlight color={getRandomColor(colors)}>
                     {title}
                 </RainbowHighlight>
             </h1>
@@ -18,3 +18,6 @@ export default ({ pageKey, title, quotes }) => (
     </>
 
 )
+
+
+const getRandomColor = (colors) => colors[Math.floor(Math.random() * colors.length)]

@@ -4,14 +4,13 @@ import React from "react";
 
 import PageTitle from "./PageTitle";
 
-const pageKey = 1
 const title = "Experience."
 const quotes = "Some quotes..."
 export default function Experience() {
   return (
     <section className="bg-white">
       <div className="max-w-6xl mx-auto h-48 bg-white">
-        <PageTitle pageKey={pageKey} title={title} quotes={quotes} />
+        <PageTitle title={title} quotes={quotes} />
       </div>
       <div className="bg-white dark:bg-gray-900 -mt-4">
         <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
