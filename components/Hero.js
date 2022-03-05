@@ -1,7 +1,7 @@
 import React from "react";
 
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "@components/RainbowHighlight";
+import { RainbowHighlight } from "@components/ui/RainbowHighlight";
 import userData from "@constants/data";
 import colors from "@constants/colors"
 

@@ -1,62 +1,92 @@
 import React from "react";
-import { ReactLogo, GithubLogo, WhatsappLogo, LinkedInLogo, TailwindLogo, NextJsLogo } from "./logo";
+import { FiGithub, FiTwitter, FiSlack, FiLinkedin } from "react-icons/fi";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
 
+import { HoverItem } from "@components/ui/HoverItem";
+
+import { ReactLogo, TailwindLogo, NextJsLogo } from "./logo";
+
+// TODO: Make data dyanamic (fetch from data store...)
 const name = "William"
+const link = "https://google.com"
+const logoSize = 30
+const canConnectWith = ["github", "linkedin", "wa"]
 
 export default function Footer() {
   return (
-    <>
-      <div className="max-w-6xl mx-auto px-4 md:py-20">
-        <div className="flex flex-col space-y-4 justify-center items-center mt-8">
-          <div className="text-xl">
-            <p>Copyright &copy; {new Date().getFullYear()}
-              <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
-                <a
-                  className="hover:bg-blue-500 rounded-md px-2 py-1  hover:text-gray-50"
-                  href="https://manuarora.in"
-                >
-                  {name}
-                </a>
-              </div>
-            </p>
-          </div>
-          <div className="text-lg">
-            Created with {" "}
-            <span className="inline-block">
-              <ReactLogo width={20} height={20} />
-            </span>
-            , &nbsp;
-            <span className="inline-block">
-              <NextJsLogo width={20} height={20} />
-            </span>
-            &nbsp; and &nbsp;
-            <span className="inline-block">
-              <TailwindLogo width={20} height={20} />
-            </span>
-
-            <br />
-            and a small pinch of with 💛
-          </div>
-          <div></div>
-          <div className="text-sm">
-            Template heavily inspired from
-            <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
+    <div className="max-w-6xl mx-auto px-4 md:py-20">
+      <div className="flex flex-col space-y-4 justify-center items-center mt-8">
+        <div className="text-xl">
+          <p>Copyright &copy; {new Date().getFullYear()}
+            <HoverItem color="blue">
               <a
-                className="hover:bg-red-500 rounded-md px-2 py-1  hover:text-gray-50"
-                href="https://manuarora.in"
+                className="rounded-md px-2 py-1"
+                href={link}
               >
-                Manu Arora
+                {name}
               </a>
-            </div>
-          </div>
-          <div className="space-x-4 flex flex-row items-center">
-            <GithubLogo width={30} height={30} />
-            <LinkedInLogo width={30} height={30} />
-            <WhatsappLogo width={30} height={30} />
-          </div>
+            </HoverItem>
+          </p>
+        </div>
+        <div className="text-lg">
+          Created with {" "}
+          <span className="inline-block"><ReactLogo width={20} height={20} /></span>, &nbsp;
+          <span className="inline-block"><NextJsLogo width={20} height={20} /></span>&nbsp; and &nbsp;
+          <span className="inline-block"><TailwindLogo width={20} height={20} /></span><br />
+          and a many pinch of 💛
+        </div>
+        <div></div>
+        <div className="text-sm">
+          Template heavily inspired from
+          <HoverItem color="red">
+            <a
+              className="rounded-md px-2 py-1 hover:text-gray-50"
+              href="https://manuarora.in"
+            >
+              Manu Arora
+            </a>
+          </HoverItem>
+        </div>
+        <div className="space-x-4 flex flex-row items-center">
+          {canConnectWith.map((method, idx) => (
+            <HoverItem color="red">
+              <ConnectMethod key={idx} method={method} link={"https://google.com"} />
+            </HoverItem>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
+}
+
+// Add based on requirement..
+const getConnectMethodComponent = (method, size) => {
+  switch (method) {
+    case "github":
+      return <FiGithub size={size} />
+      break;
+    case "linkedin":
+      return <FiLinkedin size={size} />
+    case "wa":
+      return <AiOutlineWhatsApp size={size} />
+    case "slack":
+      return <FiSlack size={size} />
+    case "twitter":
+      return <FiTwitter size={size} />
+    default:
+      return <HiOutlineQuestionMarkCircle size={size} />
+  }
+}
+
+const ConnectMethod = ({ method, link }) => {
+  const component = getConnectMethodComponent(method, logoSize)
+  return <a
+    href={link}
+    target="_blank"
+  >
+    {component != null && component}
+  </a>
+
 }
 

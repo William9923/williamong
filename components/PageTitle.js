@@ -1,7 +1,7 @@
 import React from "react";
 import colors from "@constants/colors";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
+import { RainbowHighlight } from "./ui/RainbowHighlight";
 
 export default ({ title, quotes }) => (
     <>
