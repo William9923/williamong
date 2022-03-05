@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "setup": "sh setup.sh"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -25,7 +26,13 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0-alpha.3",
     "autoprefixer": "^10.4.2",
+    "husky": "^7.0.4",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   }
 }
