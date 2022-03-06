@@ -13,6 +13,11 @@
     "start": "next start",
     "setup": "sh setup.sh"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "axios": "^0.21.1",

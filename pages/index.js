@@ -1,17 +1,34 @@
 import ContainerBlock from "@components/ContainerBlock";
 import Hero from "@components/Hero";
 
-export default function Home() {
+import { fetchHomeData, fetchMiscData } from "@lib/fetcher";
+
+export default function Home({ data, misc }) {
+
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="William - Software Engineer"
+      description="Welcome to my website"
+      misc={misc}
     >
-      <Hero />
+      <Hero name={data.name} profileDetails={data.profileDetails} profileImgURL={data.avatar}/>
       {/* Achievement */}
       {/* Featured Projects... */}
       {/* Featured Blogs... -> Coming soon */}
       {/* Web Gl Dogs... + Github statistcs */}
     </ContainerBlock>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const data = await fetchHomeData()
+    const misc = await fetchMiscData()
+    console.log(data)
+    console.log(misc)
+    return { props: { data, misc } }
+  } catch (err) {
+    console.log(err)
+    return {}
+  }
 }

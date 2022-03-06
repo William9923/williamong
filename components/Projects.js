@@ -5,7 +5,7 @@ import ProjectCard from "@components/ProjectCard";
 import userData from "@constants/data";
 
 const title = "Projects."
-const quotes = "Lorem Ipsum..."
+const quotes = "Because life is good when working on new ideas."
 
 export default function Projects() {
   return (

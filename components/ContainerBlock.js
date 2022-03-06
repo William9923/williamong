@@ -8,10 +8,11 @@ const meta = {
   title: "William - Software Engineer",
   description: `I've been developing software system from 2020 and will keep learning. Get in touch with me to know more about my journey...`,
   image: "/profile-edit.jpg",
-  type: "website"
+  type: "website",
+  date: "2022"
 }
 
-export default function ContainerBlock({ children, ...customMeta }) {
+export default function ContainerBlock({ children, misc, ...customMeta }) {
   const router = useRouter();
 
   return (
@@ -29,7 +30,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           href={`https://yourwebsite.com${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="William Homez" />
+        <meta property="og:site_name" content="William Home" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
@@ -37,7 +38,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+      <main className="w-full">
         <Navbar />
         <div>{children}</div>
         <Footer />

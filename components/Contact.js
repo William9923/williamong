@@ -3,8 +3,8 @@ import PageTitle from "@components/PageTitle";
 import Divider from "@components/Divider";
 
 const title = "Contact Me!"
-const quotes = "Lets talk about anything! Or Hire Me!"
-export default function Contact() {
+const quotes = "Feel free to ask me about anything..."
+export default function Contact({email, phoneNumber}) {
   return (
     <section className="bg-white flex flex-col justify-center">
       <div className="max-w-6xl mx-auto h-48 bg-white">
@@ -13,11 +13,11 @@ export default function Contact() {
 
       <div className="flex flex-row my-10">
         <div className="w-1/2 text-left">
-          <EmailContactInfo email={"williamong1400@gmail.com"} />
+          <EmailContactInfo email={email} />
         </div>
 
         <div className="w-1/2 text-right">
-          <WhatsAppContactInfo phoneNumber={"6282112411431"} />
+          <WhatsAppContactInfo phoneNumber={phoneNumber} />
         </div>
       </div>
 
@@ -51,7 +51,7 @@ const EmailContactInfo = ({ email }) => (
       Feel free to drop an email to me if you are interested to hire me!
     </h5>
     <p className="my-1 text-gray-800 dark:text-gray-200">
-      We can discuss about my skills and wether it will help your company/project!.
+      We can discuss about my skills and whether it will help your company/project!.
     </p>
     <a
       href={`mailto:${email}?subject=I want to hire/learn more about you!`}

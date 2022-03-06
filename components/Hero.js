@@ -2,18 +2,10 @@ import React from "react";
 
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "@components/ui/RainbowHighlight";
-import userData from "@constants/data";
 import colors from "@constants/colors"
 
-const name = "William"
-const profileDetails = [
-  "🖥 I’m a developer, engineer, and a student.",
-  "📌 Currently on my last year (fourth year) in ITB. ",
-  "🗒 I previously work at Tokopedia as a Software Engineer Intern",
-  "🔨 Love to automate things"
-]
+export default function Hero({ name, profileDetails, profileImgURL }) {
 
-export default function Hero() {
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-3/4 sm:w-2/3 mx-auto text-center md:text-left lg:pt-10">
@@ -44,7 +36,7 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-row justify-center items-end hidden lg:block relative w-full ml-4 md:w-1/2 -mr-3">
-        <img src={userData.avatarUrl} alt="avatar" className="drop-shadow-lg" />
+        <img src={profileImgURL} alt="avatar" className="drop-shadow-lg" />
         <div className="flex flex-row justify-center mt-4">
           <div className="flex flex-row space-x-4">
             <LeftToUpperArrowIcon />
@@ -71,5 +63,4 @@ const LeftToUpperArrowIcon = () => (
     />
   </svg>
 )
-
 

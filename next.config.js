@@ -19,6 +19,11 @@ module.exports = withImages({
          */
         return config;
     },
+    resolve: {
+        fallback: {
+            "fs": false
+        },
+    },
     sourceMaps: {
         productionBrowserSourceMaps: true
     },
