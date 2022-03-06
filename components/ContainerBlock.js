@@ -7,7 +7,7 @@ import Footer from "@components/Footer";
 const meta = {
   title: "William - Software Engineer",
   description: `I've been developing software system from 2020 and will keep learning. Get in touch with me to know more about my journey...`,
-  image: "/profile-edit.jpg",
+  image: "/avatar.jpg",
   type: "website",
   date: "2022"
 }
@@ -41,7 +41,7 @@ export default function ContainerBlock({ children, misc, ...customMeta }) {
       <main className="w-full">
         <Navbar />
         <div>{children}</div>
-        <Footer />
+        <Footer misc={misc} />
       </main>
     </div>
   );

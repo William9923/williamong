@@ -15,7 +15,7 @@ export default function ComingSoon() {
                 </h3>
             </div>
             <div className="flex justify-center">
-                <Image
+                <img
                     src={gif}
                     alt={"Feature in Progress..."}
                     width={500}

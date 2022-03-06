@@ -2,18 +2,12 @@ import React from "react";
 import { FiGithub, FiTwitter, FiSlack, FiLinkedin } from "react-icons/fi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
-
 import { HoverItemBlue, HoverItemRed } from "@components/ui/HoverItem";
-
 import { ReactLogo, TailwindLogo, NextJsLogo } from "@components/logo";
 
-// TODO: Make data dyanamic (fetch from data store...)
-const name = "William"
-const link = "https://google.com"
 const logoSize = 30
-const canConnectWith = ["github", "linkedin", "wa"]
 
-export default function Footer() {
+export default function Footer({ misc }) {
   return (
     <div className="max-w-6xl mx-auto px-4 md:py-20">
       <div className="flex flex-col space-y-4 justify-center items-center mt-8">
@@ -22,9 +16,10 @@ export default function Footer() {
             <HoverItemBlue >
               <a
                 className="rounded-md px-2 py-1 hover:text-gray-50"
-                href={link}
+                href={misc.personalURL}
+                target="_blank"
               >
-                {name}
+                {misc.name}
               </a>
             </HoverItemBlue>
           </p>
@@ -43,14 +38,15 @@ export default function Footer() {
             <a
               className="rounded-md px-2 py-1 hover:text-gray-50"
               href="https://manuarora.in"
+              target="_blank"
             >
               Manu Arora
             </a>
           </HoverItemRed>
         </div>
         <div className="space-x-4 flex flex-row items-center">
-          {canConnectWith.map((method, idx) => (
-            <ConnectMethod key={idx} method={method} link={"https://google.com"} />
+          {misc.ref.map((method, idx) => (
+            <ConnectMethod key={idx} method={method.name} link={method.value} />
           ))}
         </div>
       </div>

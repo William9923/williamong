@@ -24,8 +24,6 @@ export async function getServerSideProps() {
   try {
     const data = await fetchHomeData()
     const misc = await fetchMiscData()
-    console.log(data)
-    console.log(misc)
     return { props: { data, misc } }
   } catch (err) {
     console.log(err)

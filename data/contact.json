@@ -24,6 +24,11 @@
             "name": "medium",
             "value" : "https://medium.com/@williamong1400/",
             "type": "link"
+        },
+        {
+            "name": "github",
+            "value": "https://github.com/William9923",
+            "type": "link"
         }
     ]
 }

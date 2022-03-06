@@ -1,15 +1,12 @@
 import React from "react";
 import ContainerBlock from "@components/ContainerBlock";
 import Contact from "@components/Contact";
-import { fetchContactData } from "@lib/fetcher";
+import { fetchContactData, fetchMiscData } from "@lib/fetcher";
 
-export default function contact({ data }) {
-  const contacts = data.contacts
-  const pn = contacts.filter((item) => (item.name === "wa" && item.type === "text"))[0]["value"]
-  const email = contacts.filter((item) => (item.name === "email" && item.type === "text"))[0]["value"]
+export default function contact({ data, misc }) {
   return (
-    <ContainerBlock>
-      <Contact phoneNumber={pn} email={email} />
+    <ContainerBlock misc={misc}>
+      <Contact phoneNumber={data.pn} email={data.email} />
       {/* Subscribe (Coming soon...) */}
       {/* Connect with me...  (medium, linked in, github, slack)*/}
     </ContainerBlock>
@@ -19,8 +16,8 @@ export default function contact({ data }) {
 export async function getServerSideProps() {
   try {
     const data = await fetchContactData()
-    console.log(data)
-    return { props: { data } }
+    const misc = await fetchMiscData()
+    return { props: { data, misc } }
   } catch (err) {
     const data = {
       contacts: []

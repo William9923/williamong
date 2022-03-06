@@ -36,7 +36,10 @@ export default function Hero({ name, profileDetails, profileImgURL }) {
       </div>
 
       <div className="flex flex-row justify-center items-end hidden lg:block relative w-full ml-4 md:w-1/2 -mr-3">
-        <img src={profileImgURL} alt="avatar" className="drop-shadow-lg" />
+        <div className="pl-14">
+          <img src={profileImgURL} alt="avatar" className="drop-shadow-lg rounded-full" />
+
+        </div>
         <div className="flex flex-row justify-center mt-4">
           <div className="flex flex-row space-x-4">
             <LeftToUpperArrowIcon />

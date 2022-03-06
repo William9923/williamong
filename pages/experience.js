@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerBlock from "@components/ContainerBlock";
 import Experience from "@components/Experience";
-import { fetchContactData, fetchExperienceData } from "@lib/fetcher";
+import { fetchExperienceData, fetchMiscData } from "@lib/fetcher";
 
-export default function experience({ data }) {
+export default function experience({ data, misc }) {
   return (
-    <ContainerBlock title="Experience - William">
+    <ContainerBlock title="Experience - William" misc={misc}>
       <Experience techs={data.techs} works={data.works} />
       {/* Tech Stack... */}
     </ContainerBlock>
@@ -15,19 +15,18 @@ export default function experience({ data }) {
 export async function getServerSideProps() {
   try {
     const data = await fetchExperienceData()
-    const contacts = await fetchContactData()
-
-    data.works.sort((x,y) => y.idx - x.idx) 
-    // const misc = {
-    //   "github"
-    // }
-
-    return { props: { data } }
+    const misc = await fetchMiscData()
+    data.works.sort((x, y) => y.idx - x.idx)
+    return { props: { data, misc } }
   } catch (err) {
     const data = {
       works: [],
       techs: []
     }
-    return { props: { data } }
+    return {
+      props: {
+        data
+      }
+    }
   }
 }
