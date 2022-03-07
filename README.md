@@ -40,20 +40,19 @@
 <table>
   <tr>
     <td valign="top">
-        <code><img height="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="react"></code>
-        <br/> 
-        <center>React Js</center>
+        <img height="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="react">
     </td>
     <td valign="top">
-        <code><img height="100" src="https://raw.githubusercontent.com/github/explore/28b02bbc9ad9f7a503c43775aebeb515dc2da5fc/topics/nextjs/nextjs.png" alt="react"></code>
-        <br/> 
-        <center>Next Js</center>
+        <img height="100" src="https://raw.githubusercontent.com/github/explore/28b02bbc9ad9f7a503c43775aebeb515dc2da5fc/topics/nextjs/nextjs.png" alt="react">
     </td>
     <td valign="top">
-        <code><img height="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="javascript"></code>
-        <br/> 
-        <center>Javascript</center>
+        <img height="100" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="javascript">
     </td>
+  </tr>
+  <tr>
+    <td><p align="center">React Js</p></td>
+    <td><p align="center">Next Js</p></td>
+    <td><p align="center">Javascript</p></td>
   </tr>
 </table>
 
