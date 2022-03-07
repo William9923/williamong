@@ -16,6 +16,7 @@
     <img alt="Website" src="https://img.shields.io/website?down_message=offline&label=site&up_message=online&url=http%3A%2F%2Fwilliam9923.github.io" />
   </p>
 
+<img src="public/demo.jpg"></img>
 
 >*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer*
 
