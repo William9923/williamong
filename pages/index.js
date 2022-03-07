@@ -4,7 +4,7 @@ import Hero from "@components/Hero";
 import { fetchHomeData, fetchMiscData } from "@lib/fetcher";
 
 export default function Home({ data, misc }) {
-
+  console.log()
   return (
     <ContainerBlock
       title="William - Software Engineer"

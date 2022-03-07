@@ -5,7 +5,7 @@ import { fetchContactData, fetchMiscData } from "@lib/fetcher";
 
 export default function contact({ data, misc }) {
   return (
-    <ContainerBlock misc={misc}>
+    <ContainerBlock title="Contacts - William" misc={misc}>
       <Contact phoneNumber={data.pn} email={data.email} />
       {/* Subscribe (Coming soon...) */}
       {/* Connect with me...  (medium, linked in, github, slack)*/}
