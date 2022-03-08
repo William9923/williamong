@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/William9923">
-    <img alt="William" src="./public/gif/thumbnail.gif" width="100" />
+    <img alt="William" src="./public/gif/thumbnail.gif" width="300" />
     <h2 align="center">William</h2>
   </a>
 </p> 
