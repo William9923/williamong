@@ -1,14 +1,13 @@
 import React from "react";
 import ContainerBlock from "@components/ContainerBlock";
 import Projects from "@components/Projects";
-import { fetchMiscData } from "@lib/fetcher";
+import { fetchMiscData, fetchProjectsData } from "@lib/fetcher";
 
-export default function projects({misc}) {
-  console.log("Projects")
-  console.log(misc)
+export default function projects({projects, misc}) {
+
   return (
     <ContainerBlock title="Projects - William" misc={misc}>
-      <Projects />
+      <Projects data={projects}/>
       {/* Coming soon projects... */}
     </ContainerBlock>
   );
@@ -16,8 +15,9 @@ export default function projects({misc}) {
 
 export async function getServerSideProps() {
   try {
+    const projects = await fetchProjectsData()
     const misc = await fetchMiscData()
-    return { props: { misc } }
+    return { props: { projects, misc } }
   } catch (err) {
     return { props: {} }
   }
