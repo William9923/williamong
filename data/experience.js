@@ -1,54 +1,54 @@
-{
-    "works": [
+const experience = {
+    works: [
         {
-            "idx": 1,
-            "title": "Backend Engineer Intern",
-            "company": "Xtremax Indonesia",
-            "year": "2020",
-            "duration": "May - Aug (2020)",
-            "companyLink": "https://www.xtremax.com/join-us",
-            "desc": "Contributed on building PAC (Press Accreditation Card) Website for Singapore Press and many more...",
-            "detail": []
+            idx: 1,
+            title: "Backend Engineer Intern",
+            company: "Xtremax Indonesia",
+            year: "2020",
+            duration: "May - Aug (2020)",
+            companyLink: "https://www.xtremax.com/join-us",
+            desc: "Contributed on building PAC (Press Accreditation Card) Website for Singapore Press and many more...",
+            detail: []
         },
         {
-            "idx": 2,
-            "title": "Head Division (Datavidia)",
-            "company": "Arkavidia",
-            "year": "2020",
-            "duration": "July (2020) - Mar (2021)",
-            "companyLink": "https://archive.arkavidia.id/7/",
-            "desc": "Help and manage Datavidia team to successfully conduct data science competition during Arkavidia event in 2021.",
-            "detail": []
+            idx: 2,
+            title: "Head Division (Datavidia)",
+            company: "Arkavidia",
+            year: "2020",
+            duration: "July (2020) - Mar (2021)",
+            companyLink: "https://archive.arkavidia.id/7/",
+            desc: "Help and manage Datavidia team to successfully conduct data science competition during Arkavidia event in 2021.",
+            detail: []
         },
         {
-            "idx": 3,
-            "title": "Blibli Future Apprentice",
-            "company": "Blibli",
-            "year": "2021",
-            "duration": "Jan - Aug (2021)",
-            "companyLink": "https://www.blibli.com/page/future-program/",
-            "desc": "Take part in blibli future program in data track...",
-            "detail": []
+            idx: 3,
+            title: "Blibli Future Apprentice",
+            company: "Blibli",
+            year: "2021",
+            duration: "Jan - Aug (2021)",
+            companyLink: "https://www.blibli.com/page/future-program/",
+            desc: "Take part in blibli future program in data track...",
+            detail: []
         },
         {
-            "idx": 4,
-            "title": "Data Scientist Intern",
-            "company": "Blibli",
-            "year": "2021",
+            idx: 4,
+            title: "Data Scientist Intern",
+            company: "Blibli",
+            year: "2021",
             "duratio": "May - Aug (2021)",
-            "companyLink": "https://careers.blibli.com/",
-            "desc": "Contributed in building ml-based fraud detection system for merchant (seller).",
-            "detail": []
+            companyLink: "https://careers.blibli.com/",
+            desc: "Contributed in building ml-based fraud detection system for merchant (seller).",
+            detail: []
         },
         {
-            "idx": 5,
-            "title": "Software Engineer Intern",
-            "company": "Tokopedia",
-            "year": "2022",
-            "duration": "Aug (2021) - Feb (2022)",
-            "companyLink": "https://www.tokopedia.com/",
-            "desc": "Worked in Fintech Department. Helped improving their lending p2p platform (Dhanapala)",
-            "detail": []
+            idx: 5,
+            title: "Software Engineer Intern",
+            company: "Tokopedia",
+            year: "2022",
+            duration: "Aug (2021) - Feb (2022)",
+            companyLink: "https://www.tokopedia.com/",
+            desc: "Worked in Fintech Department. Helped improving their lending p2p platform (Dhanapala)",
+            detail: []
         }
     ],
     "techs": [
@@ -126,3 +126,6 @@
         }
     ]
 }
+
+
+export default experience;

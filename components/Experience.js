@@ -10,7 +10,7 @@ const quotes = "Experience is the teacher of all things"
 export default function Experience({ works, techs }) {
   return (
     <section className="bg-white flex flex-col pb-10">
-      <div className="max-w-6xl mx-auto h-48 bg-white">
+      <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
       <div className="bg-white dark:bg-gray-900 -mt-4">
@@ -25,7 +25,7 @@ export default function Experience({ works, techs }) {
                 companyLink={exp.companyLink}
                 colors="green"
               />
-              {checkLastElem(idx, userData.experience) ? null : (
+              {checkLastElem(idx, works) ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
                   <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
                     <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>

@@ -5,7 +5,7 @@ const gif = "gif/coming-soon.gif";
 export default function ComingSoon() {
     return (
         <>
-            <div>
+            <div className="py-5">
                 <h2 className="text-xl md:text-3xl font-bold md:py-15 sm:py-5 text-center">
                     Coming Soon...
                 </h2>

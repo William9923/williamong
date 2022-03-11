@@ -27,8 +27,11 @@ export default function Home({ data, misc }) {
 
 export async function getServerSideProps() {
   try {
-    const data = await fetchHomeData()
-    const misc = await fetchMiscData()
+    const data =  fetchHomeData()
+    const misc =  fetchMiscData()
+    console.log(data)
+    console.log(misc)
+    console.log("home")
     return { props: { data, misc } }
   } catch (err) {
     console.log(err)
