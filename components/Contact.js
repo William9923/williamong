@@ -6,7 +6,7 @@ const title = "Contact Me!"
 const quotes = "Feel free to ask me about anything..."
 export default function Contact({email, phoneNumber}) {
   return (
-    <section className="bg-white flex flex-col justify-start">
+    <div className="bg-white flex flex-col justify-start">
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
@@ -20,7 +20,7 @@ export default function Contact({email, phoneNumber}) {
           <WhatsAppContactInfo phoneNumber={phoneNumber} />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

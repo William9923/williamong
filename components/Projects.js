@@ -10,7 +10,7 @@ export default function Projects({ data }) {
 
   const projects = data.projects.sort((x, y) => y.idx - x.idx)
   return (
-    <section className="bg-white flex flex-col justify-center">
+    <div className="bg-white flex flex-col justify-center">
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
@@ -43,6 +43,6 @@ export default function Projects({ data }) {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
