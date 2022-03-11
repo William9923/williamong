@@ -4,14 +4,14 @@
   "version": "0.1.0",
   "author": {
     "name": "William",
-    "email": "williamong1400@gmail.com"
+    "email": "williamong1400@gmail.com",
+    "url": "https://willz-home.vercel.app/"
   },
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "setup": "sh setup.sh"
+    "start": "next start"
   },
   "browser": {
     "fs": false,
@@ -21,9 +21,11 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "axios": "^0.21.1",
+    "globby": "^3.0.0",
     "next": "10.x",
     "next-images": "^1.8.4",
     "next-themes": "0.0.15",
+    "prettier": "^2.5.1",
     "react": "17.x",
     "react-dom": "17.x",
     "react-icons": "^4.3.1",

@@ -1,6 +1,7 @@
 const path = require('path');
 
 const withImages = require('next-images')
+const debug = process.env.NODE_ENV !== "production";
 module.exports = withImages({
     webpack(
         config,
@@ -10,7 +11,7 @@ module.exports = withImages({
         }
     ) {
         if (isServer) {
-            // require('./scripts/generate-sitemap');
+            require('./scripts/generate-sitemap');
             console.log("Generating sitemap...")
         }
         /**
@@ -55,5 +56,6 @@ module.exports = withImages({
     i18n: {
         locales: ['en-US'],
         defaultLocale: 'en-US'
-    }
+    },
+    assetPrefix: !debug ? 'https://william9923.github.io/willz-home/' : '',
 });

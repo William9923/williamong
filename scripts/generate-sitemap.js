@@ -26,7 +26,7 @@ const prettier = require("prettier");
 
                 return `
                         <url>
-                            <loc>${`https://manuarora.in${route}`}</loc>
+                            <loc>${`https://willz-home.vercel.app${route}`}</loc>
                         </url>
                     `;
               })
