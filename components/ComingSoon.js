@@ -1,6 +1,6 @@
 import React from 'react';
 
-const gif = "gif/coming-soon.gif";
+const gif = "/gif/coming-soon.gif";
 
 export default function ComingSoon() {
     return (

@@ -26,7 +26,7 @@ export default function Navbar() {
     <div className="max-w-6xl mx-auto md:px-4 py-10 md:py-20">
       <div className="flex md:flex-row justify-between items-center ">
         <div className="hover:scale-110 block md:hidden ml-4" >
-          <Link href="/" as={ process.env.BACKEND_URL + '/'}>
+          <Link href="/">
             <a>
               <FiHome size={30} />
             </a>
@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         <div className="hover:scale-110 hidden md:block" >
-          <Link href="/" as={ process.env.BACKEND_URL + '/about'}>
+          <Link href="/">
             <a>
               <h1 className="font-semibold text-xl">
                 {userData.name}
@@ -81,7 +81,7 @@ const Menu = ({ link, title, router }) => (
 )
 
 const SmallMenu = ({ link, title }) => (
-  <Link href={link} as={ process.env.BACKEND_URL + link}>
+  <Link href={link}>
     <button className="inline-block hover:scale-110">
       <a className="text-base font-normal text-gray-600">
         {title}
