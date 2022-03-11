@@ -9,7 +9,7 @@ const quotes = "Experience is the teacher of all things"
 
 export default function Experience({ works, techs }) {
   return (
-    <section className="bg-white flex flex-col">
+    <section className="bg-white flex flex-col pb-10">
       <div className="max-w-6xl mx-auto h-48 bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>

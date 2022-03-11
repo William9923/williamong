@@ -4,53 +4,58 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
 import { HoverItemBlue, HoverItemRed } from "@components/ui/HoverItem";
 import { ReactLogo, TailwindLogo, NextJsLogo } from "@components/logo";
+import Divider from "@components/Divider";
 
 const logoSize = 30
 
 export default function Footer({ misc }) {
   return (
-    <div className="max-w-6xl mx-auto px-4 md:py-20">
-      <div className="flex flex-col space-y-4 justify-center items-center mt-8">
-        <div className="text-xl">
-          <p>Copyright &copy; {new Date().getFullYear()}
-            <HoverItemBlue >
+    <>
+      <Divider />
+      <div className="max-w-6xl mx-auto px-4 pb-10">
+        <div className="flex flex-col space-y-4 justify-center items-center mt-8">
+          <div className="text-xl">
+            <p>Copyright &copy; {new Date().getFullYear()}
+              <HoverItemBlue >
+                <a
+                  className="rounded-md px-2 py-1 hover:text-gray-50"
+                  href={misc.personalURL}
+                  target="_blank"
+                >
+                  {misc.name}
+                </a>
+              </HoverItemBlue>
+            </p>
+          </div>
+          <div className="text-lg">
+            Created with {" "}
+            <span className="inline-block"><ReactLogo width={20} height={20} /></span>, &nbsp;
+            <span className="inline-block"><NextJsLogo width={20} height={20} /></span>&nbsp; and &nbsp;
+            <span className="inline-block"><TailwindLogo width={20} height={20} /></span><br />
+            and a many pinch of 💛
+          </div>
+          <div></div>
+          <div className="text-sm">
+            Template heavily inspired from
+            <HoverItemRed>
               <a
                 className="rounded-md px-2 py-1 hover:text-gray-50"
-                href={misc.personalURL}
+                href="https://manuarora.in"
                 target="_blank"
               >
-                {misc.name}
+                Manu Arora
               </a>
-            </HoverItemBlue>
-          </p>
-        </div>
-        <div className="text-lg">
-          Created with {" "}
-          <span className="inline-block"><ReactLogo width={20} height={20} /></span>, &nbsp;
-          <span className="inline-block"><NextJsLogo width={20} height={20} /></span>&nbsp; and &nbsp;
-          <span className="inline-block"><TailwindLogo width={20} height={20} /></span><br />
-          and a many pinch of 💛
-        </div>
-        <div></div>
-        <div className="text-sm">
-          Template heavily inspired from
-          <HoverItemRed>
-            <a
-              className="rounded-md px-2 py-1 hover:text-gray-50"
-              href="https://manuarora.in"
-              target="_blank"
-            >
-              Manu Arora
-            </a>
-          </HoverItemRed>
-        </div>
-        <div className="space-x-4 flex flex-row items-center">
-          {misc.ref.map((method, idx) => (
-            <ConnectMethod key={idx} method={method.name} link={method.value} />
-          ))}
+            </HoverItemRed>
+          </div>
+          <div className="space-x-4 flex flex-row items-center">
+            {misc.ref.map((method, idx) => (
+              <ConnectMethod key={idx} method={method.name} link={method.value} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
+
   );
 }
 

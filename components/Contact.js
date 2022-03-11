@@ -6,22 +6,20 @@ const title = "Contact Me!"
 const quotes = "Feel free to ask me about anything..."
 export default function Contact({email, phoneNumber}) {
   return (
-    <section className="bg-white flex flex-col justify-center">
+    <section className="bg-white flex flex-col justify-start">
       <div className="max-w-6xl mx-auto h-48 bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
 
-      <div className="flex flex-row my-10">
-        <div className="w-1/2 text-left">
+      <div className="flex flex-col md:flex-row my-10">
+        <div className="w-full md:w-1/2 text-center md:text-left py-2">
           <EmailContactInfo email={email} />
         </div>
 
-        <div className="w-1/2 text-right">
+        <div className="w-full md:w-1/2 text-center md:text-right py-2">
           <WhatsAppContactInfo phoneNumber={phoneNumber} />
         </div>
       </div>
-
-      <Divider />
     </section>
   );
 }

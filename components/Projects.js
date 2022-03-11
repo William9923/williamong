@@ -29,7 +29,7 @@ export default function Projects({ data }) {
         </div>
       </div>
       <div className="block md:hidden bg-white">
-        <div className="mx-auto flex flex-col justify-center items-center gap-6 md:gap-8 py-20 pb-40">
+        <div className="mx-auto flex flex-col justify-center items-center gap-6 py-10 pb-20">
           {projects.map((proj) => (
             <ProjectCard
               title={proj.title}
