@@ -9,7 +9,7 @@ export default function HoverCard({ tags, title, description, href, children }) 
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div className="flex items-center border border-gray-200 dark:border-gray-800 rounded p-4">
+            <div className="flex items-center border border-gray-200 rounded p-4">
                 <div className="h-8 w-8 ml-2 mr-4">
                     <span className="sr-only">{title}</span>
                     {children}

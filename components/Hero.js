@@ -12,14 +12,14 @@ export default function Hero({ name, profileDetails, profileDataUrl, profileImgU
     <div className="flex flex-row justify-center items-start overflow-hidden">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-3/4 sm:w-2/3 mx-auto text-center md:text-left lg:pt-10">
         <RoughNotationGroup show={true}>
-          <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black dark:text-white">
+          <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black">
             Hey, I’m{" "}
             <RainbowHighlight color={getRandomColor(colors)}>
               <span className="dark:text-black">{name}</span>
             </RainbowHighlight>{" "}
           </h1>
 
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-700 ml-4 dark:text-gray-200 my-2">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-700 ml-4 my-2">
             An aspiring &nbsp;
             <RainbowHighlight color={getRandomColor(colors)}>
               Software Engineer.
@@ -27,7 +27,7 @@ export default function Hero({ name, profileDetails, profileDataUrl, profileImgU
           </h1>
 
           <div className="ml-4 mb-16 mt-4">
-            <h2 className="text-gray-600 text-left dark:text-gray-400  font-light tracking-wide leading-normal">
+            <h2 className="text-gray-600 text-left font-light tracking-wide leading-normal">
               {profileDetails.map((detail, idx) => (
                 <span key={idx}>{detail}<br /></span>
               ))}

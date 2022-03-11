@@ -9,9 +9,9 @@ import userData from "@constants/data";
 const menu = ["/blogs", "/experience", "/projects", "/contact"]
 const menuMaps = {
   "/blogs": "Blogs",
-  "/experience": "Experience",
-  "/projects": "Projects",
-  "/contact": "Contacts",
+  "/experience": "Work",
+  "/projects": "Proj",
+  "/contact": "Contact",
 }
 
 export default function Navbar() {
@@ -36,10 +36,10 @@ export default function Navbar() {
         <div className="hover:scale-110 hidden md:block" >
           <Link href="/" as={ process.env.BACKEND_URL + '/about'}>
             <a>
-              <h1 className="font-semibold text-xl dark:text-gray-100">
+              <h1 className="font-semibold text-xl">
                 {userData.name}
               </h1>
-              <p className="text-base font-light text-gray-500 dark:text-gray-300">
+              <p className="text-base font-light text-gray-500">
                 {userData.designation}
               </p>
             </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
               <Menu key={index} link={link} title={menuMaps[link]} router={router} />
             ))}
           </div>
-          <div className="space-x-4 block md:hidden">
+          <div className="space-x-2 block md:hidden">
             {menu.map((link, index) => (
               <SmallMenu key={index} link={link} title={menuMaps[link]} />
             ))}
@@ -69,8 +69,8 @@ const Menu = ({ link, title, router }) => (
       <a
         className={`text-base   
         ${router.asPath === link
-            ? "text-gray-800 font-bold dark:text-gray-400"
-            : "text-gray-600 dark:text-gray-300 font-normal "
+            ? "text-gray-800 font-bold"
+            : "text-gray-600 font-normal "
           }`}
       >
         {title + " "}
@@ -83,7 +83,7 @@ const Menu = ({ link, title, router }) => (
 const SmallMenu = ({ link, title }) => (
   <Link href={link} as={ process.env.BACKEND_URL + link}>
     <button className="inline-block hover:scale-110">
-      <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+      <a className="text-base font-normal text-gray-600">
         {title}
       </a>
     </button>
@@ -108,7 +108,7 @@ const LightThemeIcon = () => (
     viewBox="0 0 24 24"
     fill="currentColor"
     stroke="currentColor"
-    className="w-4 h-4 text-yellow-500 dark:text-yellow-500"
+    className="w-4 h-4 text-yellow-500"
   >
     <path
       strokeLinecap="round"
@@ -125,7 +125,7 @@ const DarkThemeIcon = () => (
     viewBox="0 0 24 24"
     fill="currentColor"
     stroke="currentColor"
-    className="w-4 h-4 text-yellow-500 dark:text-yellow-500"
+    className="w-4 h-4 text-yellow-500"
   >
     <path
       strokeLinecap="round"

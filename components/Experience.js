@@ -13,8 +13,8 @@ export default function Experience({ works, techs }) {
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
-      <div className="bg-white dark:bg-gray-900 -mt-4">
-        <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
+      <div className="bg-white -mt-4">
+        <div className="grid grid-cols-1 max-w-xl mx-auto pt-20">
           {works.map((exp, idx) => (
             <div className="hover:scale-110" key={idx}>
               <ExperienceCard
@@ -30,7 +30,7 @@ export default function Experience({ works, techs }) {
                   <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
                     <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
                   </div>
-                  <div className="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"></div>
+                  <div className="w-1 h-24 bg-gray-200 rounded-full -mt-2"></div>
                 </div>
               )}
             </div>
@@ -43,8 +43,8 @@ export default function Experience({ works, techs }) {
 
 const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) => {
   return (
-    <div className="relative experience-card border p-4 bg-white dark:bg-gray-800 z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
-      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800">
+    <div className="relative experience-card border p-4 bg-white z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
+      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold">
         {year}
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
@@ -56,7 +56,7 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) =
       <span className="text-gray-500">
         {duration}
       </span>
-      <p className="text-gray-600 dark:text-gray-400 my-2">{desc}</p>
+      <p className="text-gray-600 my-2">{desc}</p>
     </div>
   );
 };
