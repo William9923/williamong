@@ -1,7 +1,6 @@
 import React from 'react';
-import Image from "next/image"
 
-import gif from "@public/gif/coming-soon.gif";
+const gif = "gif/coming-soon.gif";
 
 export default function ComingSoon() {
     return (
