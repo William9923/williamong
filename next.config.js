@@ -57,5 +57,5 @@ module.exports = withImages({
         locales: ['en-US'],
         defaultLocale: 'en-US'
     },
-    assetPrefix: !debug ? 'https://william9923.github.io/willz-home/' : '',
+    assetPrefix: !debug ? 'https://williamong.vercel.app/' : '',
 });
