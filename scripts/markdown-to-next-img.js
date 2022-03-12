@@ -26,8 +26,6 @@ async function getImageSizes(dir) {
   const files = await getFiles(dir);
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
 
-  console.log(files);
-
   files.map((filePath) => {
     const contents = unified()
       .use(markdown)

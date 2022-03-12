@@ -1,37 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { RoughNotationGroup } from "react-rough-notation";
-import { FiGithub } from "react-icons/fi"
 import { RainbowHighlight } from "@components/ui/RainbowHighlight";
+import {UnderlineHighlight} from "@components/ui/UnderlineHighlight";
 import colors from "@constants/colors"
-import {getRandomColor} from "@lib/colors";
+import { getRandomColor } from "@lib/colors";
 
 export default function Hero({ name, profileDetails, profileDataUrl, profileImgURL }) {
-  console.log(profileDetails)
+
+  const [mount, setMount] = useState(false);
+  console.log("not mounted...")
+  useEffect(() => {
+    console.log("mounted...")
+    setMount(true);
+  }, []);
+
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-3/4 sm:w-2/3 mx-auto text-center md:text-left lg:pt-10">
-        <RoughNotationGroup show={true}>
+        <RoughNotationGroup show={mount}>
           <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black">
             Hey, I’m{" "}
             <RainbowHighlight color={getRandomColor(colors)}>
-              <span className="dark:text-black">{name}</span>
+              <span>{name}</span>
             </RainbowHighlight>{" "}
           </h1>
 
           <h1 className="text-2xl md:text-3xl font-bold text-gray-700 ml-4 my-2">
             An aspiring &nbsp;
-            <RainbowHighlight color={getRandomColor(colors)}>
+            <UnderlineHighlight color={getRandomColor(colors)}>
               Software Engineer.
-            </RainbowHighlight>
+            </UnderlineHighlight>
           </h1>
 
           <div className="ml-4 mb-16 mt-4">
-            <h2 className="text-gray-600 text-left font-light tracking-wide leading-normal">
-              {profileDetails.map((detail, idx) => (
-                <span key={idx}>{detail}<br /></span>
-              ))}
-            </h2>
+              <h2 className="text-gray-600 text-left font-light tracking-wide leading-normal">
+                {profileDetails.map((detail, idx) => (
+                  <span key={idx}>{detail}<br /></span>
+                ))}
+              </h2>
             <div className="flex flex-row justify-evenly mt-4">
               <a href={profileDataUrl.resumeUrl} target="_blank"><button
                 type="button"

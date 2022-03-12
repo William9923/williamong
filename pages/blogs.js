@@ -4,8 +4,6 @@ import Blogs from "@components/Blogs"
 import { fetchMiscData } from "@lib/fetcher";
 
 export default function blogs({misc}) {
-  console.log("Blogs")
-  console.log(misc)
   return (
     <ContainerBlock title="Blogs - William" misc={misc}>
       <Blogs />
