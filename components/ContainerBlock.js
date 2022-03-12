@@ -37,6 +37,9 @@ export default function ContainerBlock({ children, misc, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        <script>
+          {/**to prevent Firefox FOUC, this must be here*/}
+        </script>
       </Head>
       <main className="w-full">
         <Navbar />

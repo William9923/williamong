@@ -9,9 +9,7 @@ import { getRandomColor } from "@lib/colors";
 export default function Hero({ name, profileDetails, profileDataUrl, profileImgURL }) {
 
   const [mount, setMount] = useState(false);
-  console.log("not mounted...")
   useEffect(() => {
-    console.log("mounted...")
     setMount(true);
   }, []);
 
