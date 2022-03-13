@@ -1,5 +1,5 @@
-import React from "react";
-import userData from "@constants/data";
+import React, {useState} from "react";
+import Pinger from "@components/ui/Pinger";
 import PageTitle from "@components/PageTitle";
 import { HoverItemGreen } from "@components/ui/HoverItem"
 
@@ -23,13 +23,12 @@ export default function Experience({ works, techs }) {
                 year={exp.year}
                 company={exp.company}
                 companyLink={exp.companyLink}
+                duration={exp.duration}
                 colors="green"
               />
               {checkLastElem(idx, works) ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
-                  <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
-                    <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
-                  </div>
+                  <Pinger />
                   <div className="w-1 h-24 bg-gray-200 rounded-full -mt-2"></div>
                 </div>
               )}
@@ -49,11 +48,12 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) =
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
       <HoverItemGreen>
-        <a href={companyLink} className="text-gray-500 hover:text-gray-50">
+        <a href={companyLink} className="text-gray-500 hover:text-gray-50 pr-2 py-2 hover:pl-2">
           {company}
         </a>
       </HoverItemGreen>
-      <span className="text-gray-500">
+      |
+      <span className="text-gray-500 p-2">
         {duration}
       </span>
       <p className="text-gray-600 my-2">{desc}</p>

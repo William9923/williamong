@@ -6,3 +6,8 @@ export default function Divider() {
     )
 }
 
+export const ThinDivider = () =>
+(
+    <div className="border border-gray-200 w-full my-8" />
+);
+

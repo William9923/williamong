@@ -35,7 +35,7 @@ const experience = {
             title: "Data Scientist Intern",
             company: "Blibli",
             year: "2021",
-            "duratio": "May - Aug (2021)",
+            duration: "May - Aug (2021)",
             companyLink: "https://careers.blibli.com/",
             desc: "Contributed in building ml-based fraud detection system for merchant (seller).",
             detail: []

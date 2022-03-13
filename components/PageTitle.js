@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 
 import { RainbowHighlight } from "@components/ui/RainbowHighlight";
 import colors from "@constants/colors";
 export default function PageTitle({ title, quotes }) {
+    const [mount, setMount] = useState(false);
+    useEffect(() => {
+        setMount(true);
+    }, []);
     return (
         <>
-            <RoughNotationGroup show={true}>
+            <RoughNotationGroup show={mount}>
                 <h1 className=" text-5xl md:text-7xl font-bold py-5 md:py-10  text-center">
                     <RainbowHighlight color={getRandomColor(colors)}>
                         {title}
