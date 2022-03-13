@@ -15,7 +15,7 @@ export default function Hero({ name, profileDetails, profileDataUrl, profileImgU
 
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full md:w-3/4 sm:w-2/3 mx-auto text-center md:text-left lg:pt-10">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-4 w-full md:w-3/4 sm:w-2/3 mx-auto text-center md:text-left lg:pt-10">
         <RoughNotationGroup show={mount}>
           <h1 className="font-bold text-5xl md:text-6xl tracking-tight ml-4 mb-4 text-black">
             Hey, I’m{" "}
