@@ -22,19 +22,21 @@
 
 ## ✨ Contents
 
+- Profile
 - Resume
 - Work Experience
-- About me
-- Education
 - Achievement
 - Personal Side Projects 
 - Contact Me!
 
 ## 🔨 WIP Features
-- Blogs
-- Custom Error page
-- Motion Frame
-- Webgl Loader 
+- [ ] Education
+- [ ] Achievement
+- [ ] Featured Section
+- [ ] Blogs
+- [ ] Custom Error page
+- [ ] Motion Frame
+- [ ] Webgl Loader 
 
 ## 📚 Tech Stack
 
