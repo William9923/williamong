@@ -30,8 +30,8 @@
 - Contact Me!
 
 ## 🔨 WIP Features
-- [ ] Education
-- [ ] Achievement
+- [x] Education
+- [x] Achievement
 - [ ] Featured Section
 - [ ] Blogs
 - [ ] Custom Error page
