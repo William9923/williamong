@@ -31,10 +31,9 @@
 - Contact Me!
 
 ## 🔨 WIP Features
+- Section Transition Button 
+- Carousel Component fror Featured Projects
 - Blogs
-- Custom Error page
-- Motion Frame
-- Webgl Loader 
 
 ## 📚 Tech Stack
 
