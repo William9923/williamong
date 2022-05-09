@@ -6,12 +6,12 @@ import { FiHome } from "react-icons/fi"
 import userData from "@constants/data";
 
 // TODO: adjust menu based on need...
-const menu = ["/blogs", "/experience", "/projects", "/contact"]
+const menu = ["/blogs", "/#experience", "/#projects", "/#contact"]
 const menuMaps = {
   "/blogs": "Blogs",
-  "/experience": "Work",
-  "/projects": "Proj",
-  "/contact": "Contact",
+  "/#experience": "Work",
+  "/#projects": "Proj",
+  "/#contact": "Contact",
 }
 
 export default function Navbar() {

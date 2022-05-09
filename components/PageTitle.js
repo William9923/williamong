@@ -11,13 +11,13 @@ export default function PageTitle({ title, quotes }) {
     return (
         <>
             <RoughNotationGroup show={mount}>
-                <h1 className=" text-5xl md:text-7xl font-bold py-5 md:py-10  text-center">
+                <h1 className=" text-3xl md:text-5xl font-bold py-5 md:py-10 text-center">
                     <RainbowHighlight color={getRandomColor(colors)}>
                         {title}
                     </RainbowHighlight>
                 </h1>
             </RoughNotationGroup>
-            <h2 className=" text-xl md:text-3xl text-gray-400 font-italic pt-5 md:py-5 text-center">
+            <h2 className=" text-lg md:text-xl text-gray-400 font-italic pt-5 md:py-5 text-center">
                 {quotes}
             </h2>
         </>

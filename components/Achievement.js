@@ -9,7 +9,7 @@ export default function Achievement() {
     return (
         <>
             <SectionTitle title={"Achievement"} />
-            <ThinDivider />
+            <br></br>
             <Subtitle>National</Subtitle>
             <ul>
                 <Step title="3rd rank, Gemastik Data Mining Competition (2019)">

@@ -6,11 +6,13 @@ import { ProjectCard, ProjectCardHorizontal } from "@components/ProjectCard";
 const title = "Projects."
 const quotes = "Because life is good when working on new ideas."
 
+// TODO: Handle Featured Projects & Only show featured project on small device...
+
 export default function Projects({ data }) {
 
   const projects = data.projects.sort((x, y) => y.idx - x.idx)
   return (
-    <div className="bg-white flex flex-col justify-center">
+    <div className="bg-white flex flex-col justify-center" id="projects">
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>

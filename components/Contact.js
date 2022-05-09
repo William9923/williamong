@@ -6,7 +6,7 @@ const title = "Contact Me!"
 const quotes = "Feel free to ask me about anything..."
 export default function Contact({email, phoneNumber}) {
   return (
-    <div className="bg-white flex flex-col justify-start">
+    <div className="bg-white flex flex-col justify-start" id="contact">
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>

@@ -9,13 +9,13 @@ const quotes = "Experience is the teacher of all things"
 
 export default function Experience({ works, techs }) {
   return (
-    <div className="bg-white flex flex-col pb-10">
+    <div className="bg-white flex flex-col pb-10" id="experience">
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
       <div className="bg-white">
         <div className="grid grid-cols-1 max-w-xl mx-auto pt-20">
-          {works.map((exp, idx) => (
+          {works.reverse().map((exp, idx) => (
             <div className="hover:scale-110" key={idx}>
               <ExperienceCard
                 title={exp.title}
