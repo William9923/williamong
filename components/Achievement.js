@@ -2,7 +2,6 @@ import React from 'react';
 
 import Subtitle from "@components/ui/Subtitle";
 import Step from "@components/ui/Step";
-import { ThinDivider } from "@components/Divider";
 import SectionTitle from '@components/SectionTitle';
 
 export default function Achievement() {
@@ -12,7 +11,7 @@ export default function Achievement() {
             <br></br>
             <Subtitle>National</Subtitle>
             <ul>
-                <Step title="3rd rank, Gemastik Data Mining Competition (2019)">
+                <Step title="3rd rank, Gemastik Data Mining Competition (2019)" certificate={"/certificate/gemastik.pdf"}>
                     Developed a deep learning model to identify
                     differences between leaves
                 </Step>

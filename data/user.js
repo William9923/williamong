@@ -10,9 +10,9 @@ const user = {
     description: "I've been developing software system from 2020 and will keep learning. Get in touch with me to know more about my journey...",
     profileDetails: [
         "🖥 I’m a developer, engineer, and a student.",
-        "📌 Currently on my last year (fourth year) in ITB. ",
+        "📌 Graduated from Bandung Institute of Technology (ITB).",
         "🗒 I previously work at Tokopedia as a Software Engineer Intern",
-        "🔨 Love to automate things"
+        "🔨 Love to automate things and contribute on open source project"
     ],
     resumeURL: "/resume.pdf"
 }

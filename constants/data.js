@@ -61,6 +61,7 @@ const userData = {
   },
   experience: [
     {
+      idx: 1,
       title: "Software Engineer Intern",
       company: "Tokopedia",
       year: "2022",
@@ -68,8 +69,10 @@ const userData = {
       companyLink: "https://www.tokopedia.com/",
       desc: "Worked in Fintech Department. Helped improving their lending p2p platform (Dhanapala)",
       detail: "",
+      certificate: "/certificate/xtremax"
     },
     {
+      idx: 2,
       title: "Data Scientist Intern",
       company: "Blibli",
       year: "2021",
@@ -77,8 +80,10 @@ const userData = {
       companyLink: "https://www.blibli.com/",
       desc: "Contributed in building ml-based fraud detection system for merchant and categorizing seller chat based on intent with machine learning",
       detail: "",
+      certificate: "/certificate/xtremax"
     },
     {
+      idx: 3,
       title: "Blibli Future Apprentice",
       company: "Blibli",
       year: "2021",
@@ -86,8 +91,10 @@ const userData = {
       companyLink: "https://www.blibli.com/page/future-program/",
       desc: "Take part in blibli future program in data track...",
       detail: "",
+      certificate: "/certificate/xtremax"
     },
     {
+      idx: 4,
       title: "Head Division (Datavidia)",
       company: "Arkavidia",
       year: "2020",
@@ -95,15 +102,18 @@ const userData = {
       companyLink: "",
       desc: "Help and manage Datavidia team to successfully conduct data science competition during Arkavidia event in 2021.",
       detail: "",
+      certificate: "/certificate/xtremax"
     },
     {
+      idx: 5,
       title: "Backend Engineer Intern",
       company: "Xtremax Indonesia",
       year: "2020",
       duration: "May - Aug (2020)",
       companyLink: "https://www.xtremax.com/",
       desc: "Contributed on building PAC (Press Accreditation Card) Website for Singapore Press and many more...",
-      detail: ""
+      detail: "",
+      certificate: "/certificate/xtremax"
     },
   ],
   resumeUrl:
