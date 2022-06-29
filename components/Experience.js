@@ -14,10 +14,10 @@ export default function Experience({ works, techs }) {
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
-      <div className="bg-white">
+      <div className="bg-white overflow-y-auto h-screen">
         <div className="grid grid-cols-1 max-w-xl mx-auto pt-20">
           {works.map((exp, idx) => (
-            <div className="hover:scale-110" key={idx}>
+            <div className="hover:scale-105" key={idx}>
               <ExperienceCard
                 title={exp.title}
                 desc={exp.desc}
