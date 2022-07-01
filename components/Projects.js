@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FiGithub, FiTwitter, FiSlack, FiLinkedin } from "react-icons/fi";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -15,30 +14,30 @@ import SectionTitle from "@components/SectionTitle";
 const title = "Projects."
 const quotes = "Because learning is a lifetime process."
 
-const featuredProjects = [
-  {
-    title: "Working Out",
-    desc: "An android application that can motivate you to workout (running/cycling)",
-    link: "https://github.com/William9923/WorkingOut",
-    imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
-    tags: ["android", "kotlin", "workout"]
-  },
-  {
-    title: "Working Out",
-    desc: "An android application that can motivate you to workout (running/cycling)",
-    link: "https://github.com/William9923/WorkingOut",
-    imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
-    tags: ["android", "kotlin", "workout"]
-  },
-  {
-    title: "Working Out",
-    desc: "An android application that can motivate you to workout (running/cycling)",
-    link: "https://github.com/William9923/WorkingOut",
-    imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
-    tags: ["android", "kotlin", "workout"]
-  },
+// const featuredProjects = [
+//   {
+//     title: "Working Out",
+//     desc: "An android application that can motivate you to workout (running/cycling)",
+//     link: "https://github.com/William9923/WorkingOut",
+//     imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
+//     tags: ["android", "kotlin", "workout"]
+//   },
+//   {
+//     title: "Working Out",
+//     desc: "An android application that can motivate you to workout (running/cycling)",
+//     link: "https://github.com/William9923/WorkingOut",
+//     imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
+//     tags: ["android", "kotlin", "workout"]
+//   },
+//   {
+//     title: "Working Out",
+//     desc: "An android application that can motivate you to workout (running/cycling)",
+//     link: "https://github.com/William9923/WorkingOut",
+//     imgUrl: "https://github.com/William9923/WorkingOut/blob/master/docs/workout.gif?raw=true",
+//     tags: ["android", "kotlin", "workout"]
+//   },
 
-]
+// ]
 
 const images = ['https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80', 'https://images.unsplash.com/photo-1523438097201-512ae7d59c44?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80', 'https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80']
 
@@ -80,43 +79,41 @@ const SmallCard = ({ title, desc, link, imgUrl, tags }) => {
   )
 }
 
-const openInNewTab = (url) => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
-
 const ProjectList = ({ projects }) => {
 
   return (
-    <center>
-      <Carousel showThumbs={false} showStatus={false} emulateTouch={true} width={"90%"}>
-        {projects.map((proj) => (
-          <>
-            <img className="rounded-xl object-scale-down h-96 w-48" src={proj.imgUrl} />
-            <div className="legend">
-              <div className="flex flex-col justify-between px-2 sm:pb-2 block group-hover:hidden">
-                <div className="mb-2">
-                  <div className="text-white font-bold text-xl mb-2">{proj.title}</div>
-                  <p className="text-grey-darker text-base">{proj.desc}</p>
+    <div className="border-4 rounded-xl border-sky-500/75">
+      <center>
+        <Carousel showThumbs={false} showStatus={false} emulateTouch={true}>
+          {projects.map((proj) => (
+            <div key={proj.idx}>
+              <img className="object-scale-down h-96 w-48" src={proj.imgUrl} />
+              <div className="legend">
+                <div className="flex flex-col justify-between px-2 sm:pb-2 block group-hover:hidden">
+                  <div className="mb-2">
+                    <div className="text-white font-bold text-xl mb-2">{proj.title}</div>
+                    <p className="text-grey-darker text-base">{proj.desc}</p>
+                  </div>
+                  <div className="pt-2 pb-1">
+                    {(proj.tags != undefined && proj.tags.length > 0) && proj.tags.map((tag, idx) => (
+                      <button key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:scale-110">#{tag}</button>
+                    ))}
+                  </div>
+                  <a href={proj.link} target="_blank">
+                    <button className="absolute mr-8 top-0 mt-28 right-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-indigo-600 hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
+                      <span className="block">➜</span>
+                    </button>
+                  </a>
+
                 </div>
-                <div className="pt-2 pb-1">
-                  {(proj.tags != undefined && proj.tags.length > 0) && proj.tags.map((tag, idx) => (
-                    <button key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:scale-110">#{tag}</button>
-                  ))}
-                </div>
-                <a href={proj.url} target="_blank">
-                  <button className="absolute mr-8 top-0 mt-28 right-0 bg-white rounded-full shadow-md h-12 w-12 text-2xl text-indigo-600 hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:shadow-outline">
-                    <span className="block">➜</span>
-                  </button>
-                </a>
 
               </div>
-
             </div>
-          </>
-        ))}
-      </Carousel>
-    </center>
+          ))}
+        </Carousel>
+      </center>
+    </div>
+
 
   );
 };
@@ -124,6 +121,7 @@ const ProjectList = ({ projects }) => {
 
 export default function Projects({ data }) {
   const projects = data.projects.sort((x, y) => y.idx - x.idx)
+  const featuredProjects = data.projects.filter((val) => data.featured.includes(val.idx))
 
   return (
     <div className="bg-white flex flex-col justify-center" id="projects">
@@ -138,7 +136,7 @@ export default function Projects({ data }) {
       <div className="flex flex-col md:flex-row justify-between py-5 pb-10">
         {
           featuredProjects.map((proj) => (
-            <div className="md:w-1/3 my-4 mx-2">
+            <div className="md:w-1/3 my-4 mx-2" key={proj.idx}>
               <SmallCard
                 title={proj.title}
                 link={proj.link}

@@ -8,7 +8,6 @@ const title = "Experience."
 const quotes = "Experience is the teacher of all things"
 
 export default function Experience({ works, techs }) {
-  console.log(works)
   return (
     <div className="bg-white flex flex-col pb-10" id="experience">
       <div className="max-w-6xl mx-auto bg-white">
@@ -43,7 +42,6 @@ export default function Experience({ works, techs }) {
 }
 
 const ExperienceCard = ({ title, desc, year, company, companyLink, duration, certificate }) => {
-  console.log(certificate)
   return (
     <div className="relative experience-card border p-4 bg-white z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
       <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold">

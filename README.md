@@ -29,11 +29,11 @@
 - Achievement
 - Personal Side Projects 
 - Contact Me!
+- Featured Projects
 
 ## 🔨 WIP Features
-- Section Transition Button 
-- Carousel Component fror Featured Projects
-- Blogs
+- [] Automate fetching data from Github (for Projects & Featured Projects)
+- [] Blogs
 
 ## 📚 Tech Stack
 
