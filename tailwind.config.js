@@ -7,6 +7,9 @@ module.exports = {
     "./components/**/*.js",
     "./layouts/**/*.js",
     "./safelist.txt",
+    './src/**/*.{html,js}', 
+    "./src/**/*.{js,jsx,ts,tsx}",
+    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   mode: "jit",
   theme: {
@@ -22,5 +25,8 @@ module.exports = {
         sans: ["Inter", ...fontFamily.sans],
       },
     },
-  }
+  },
+  plugins: [
+    require('tw-elements/dist/plugin'),
+  ]
 };

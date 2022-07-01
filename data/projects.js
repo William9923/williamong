@@ -1,5 +1,5 @@
 const projects = {
-    featured: [12, 11],
+    featured: [16, 15, 12],
     upcoming: [],
     projects: [
         {
@@ -65,6 +65,30 @@ const projects = {
             link: "https://github.com/William9923/httpmiddleware",
             imgUrl: "https://github.com/William9923/httpmiddleware/blob/master/docs/middleware-gopher.png?raw=true",
             tags: ["package", "golang", "middleware"]
+        },
+        {
+            idx: 14,
+            title: "Bulk Upload",
+            desc: "A proof of concept to uploading lots of data to the server",
+            link: "https://github.com/William9923/bulk-upload-poc",
+            imgUrl: "https://raw.githubusercontent.com/William9923/bulk-upload-poc/master/docs/img/lifting-1TB.svg",
+            tags: ["golang", "experiment", "upload-file"]
+        },
+        {
+            idx: 15,
+            title: "Indonesian ASTE Generative",
+            desc: "A Generative Approach for Opinion Triplet Extraction for Indonesian language.",
+            link: "https://github.com/William9923/indonesian-aste-generative",
+            imgUrl: "https://raw.githubusercontent.com/GeneZC/OTE-MTL/master/assets/task.png",
+            tags: ["python", "nlp", "language model"]
+        },
+        {
+            idx: 16,
+            title: "RedditVideoMakerBot",
+            desc: "Create Reddit Videos with just✨ one command ✨. (Open Source Contribution)",
+            link: "https://github.com/William9923/RedditVideoMakerBot",
+            imgUrl: "https://miro.medium.com/max/1400/1*_tFFL4D1331iE_L8J9Oh1A.jpeg",
+            tags: ["open-source", "python", "automation"]
         }
     ]
 }

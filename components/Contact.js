@@ -1,14 +1,16 @@
 import React from "react";
 import PageTitle from "@components/PageTitle";
 import Divider from "@components/Divider";
+import SectionTitle from '@components/SectionTitle';
 
 const title = "Contact Me!"
 const quotes = "Feel free to ask me about anything..."
-export default function Contact({email, phoneNumber}) {
+export default function Contact({ email, phoneNumber }) {
   return (
     <div className="bg-white flex flex-col justify-start" id="contact">
       <div className="max-w-6xl mx-auto bg-white">
-        <PageTitle title={title} quotes={quotes} />
+        <SectionTitle title={title} />
+
       </div>
 
       <div className="flex flex-col md:flex-row my-10">

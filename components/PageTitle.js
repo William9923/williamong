@@ -17,7 +17,7 @@ export default function PageTitle({ title, quotes }) {
                     </RainbowHighlight>
                 </h1>
             </RoughNotationGroup>
-            <h2 className=" text-lg md:text-xl text-gray-400 font-italic pt-5 md:py-5 text-center">
+            <h2 className=" text-lg md:text-xl text-gray-400 font-italic pt-5 md:py-2 text-center">
                 {quotes}
             </h2>
         </>

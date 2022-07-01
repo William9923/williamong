@@ -7,7 +7,7 @@ const contact ={
         },
         {
             name: "email",
-            value: "williamong1400@gmail.com",
+            value: "williamong.business@gmail.com",
             type: "text"
         },
         {

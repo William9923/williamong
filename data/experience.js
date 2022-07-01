@@ -8,7 +8,8 @@ const experience = {
             duration: "May - Aug (2020)",
             companyLink: "https://www.xtremax.com/join-us",
             desc: "Contributed on building PAC (Press Accreditation Card) Website for Singapore Press and many more...",
-            detail: []
+            detail: [],
+            certificate: "/certificate/xtremax.pdf"
         },
         {
             idx: 2,
@@ -18,7 +19,8 @@ const experience = {
             duration: "July (2020) - Mar (2021)",
             companyLink: "https://archive.arkavidia.id/7/",
             desc: "Help and manage Datavidia team to successfully conduct data science competition during Arkavidia event in 2021.",
-            detail: []
+            detail: [],
+            certificate: "/certificate/arkavidia.pdf"
         },
         {
             idx: 3,
@@ -28,7 +30,7 @@ const experience = {
             duration: "Jan - Aug (2021)",
             companyLink: "https://www.blibli.com/page/future-program/",
             desc: "Take part in blibli future program in data track...",
-            detail: []
+            detail: [],
         },
         {
             idx: 4,
@@ -38,7 +40,7 @@ const experience = {
             duration: "May - Aug (2021)",
             companyLink: "https://careers.blibli.com/",
             desc: "Contributed in building ml-based fraud detection system for merchant (seller).",
-            detail: []
+            detail: [],
         },
         {
             idx: 5,
@@ -48,7 +50,8 @@ const experience = {
             duration: "Aug (2021) - Feb (2022)",
             companyLink: "https://www.tokopedia.com/",
             desc: "Worked in Fintech Department. Helped improving their lending p2p platform (Dhanapala)",
-            detail: []
+            detail: [],
+        certificate: "/certificate/tokopedia.pdf"
         }
     ],
     "techs": [

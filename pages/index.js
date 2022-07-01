@@ -11,9 +11,15 @@ import { fetchHomeData, fetchMiscData, fetchContactData, fetchExperienceData, fe
 import Achievement from "@components/Achievement";
 
 export default function Home({ data, contacts, experience, projects, misc }) {
-  console.log(data)
-  console.log(contacts)
-  console.log(misc)
+ 
+  const works = experience.works.sort(function(a, b) {
+    var keyA = a.idx;
+    var keyB = b.idx;
+    // Compare the 2 dates
+    if (keyA < keyB) return -1;
+    if (keyA > keyB) return 1;
+    return 0;
+  }).reverse()
   return (
     <ContainerBlock
       title="William - Software Engineer"
@@ -26,13 +32,11 @@ export default function Home({ data, contacts, experience, projects, misc }) {
         profileDataUrl={data.profileDataUrl}
         profileImgURL={data.avatar}
       />
-
       <ThinDivider />
-      <Experience techs={experience.techs} works={experience.works} />
+      <Experience techs={experience.techs} works={works} />
       <Education />
       <Achievement />
 
-      <ThinDivider />
       <Projects data={projects}/>
 
       <ThinDivider />

@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Pinger from "@components/ui/Pinger";
 import PageTitle from "@components/PageTitle";
-import { HoverItemGreen } from "@components/ui/HoverItem"
+import { HoverItemGreen, HoverItemBlue } from "@components/ui/HoverItem"
 
 
 const title = "Experience."
@@ -13,10 +13,10 @@ export default function Experience({ works, techs }) {
       <div className="max-w-6xl mx-auto bg-white">
         <PageTitle title={title} quotes={quotes} />
       </div>
-      <div className="bg-white">
+      <div className="bg-white overflow-y-auto h-screen">
         <div className="grid grid-cols-1 max-w-xl mx-auto pt-20">
-          {works.reverse().map((exp, idx) => (
-            <div className="hover:scale-110" key={idx}>
+          {works.map((exp, idx) => (
+            <div className="hover:scale-105" key={idx}>
               <ExperienceCard
                 title={exp.title}
                 desc={exp.desc}
@@ -24,12 +24,13 @@ export default function Experience({ works, techs }) {
                 company={exp.company}
                 companyLink={exp.companyLink}
                 duration={exp.duration}
+                certificate={exp.certificate}
                 colors="green"
               />
               {checkLastElem(idx, works) ? null : (
                 <div className="divider-container flex flex-col items-center -mt-2">
                   <Pinger />
-                  <div className="w-1 h-24 bg-gray-200 rounded-full -mt-2"></div>
+                  <div className="w-1 h-14 bg-gray-200 rounded-full -mt-2"></div>
                 </div>
               )}
             </div>
@@ -40,7 +41,7 @@ export default function Experience({ works, techs }) {
   );
 }
 
-const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) => {
+const ExperienceCard = ({ title, desc, year, company, companyLink, duration, certificate }) => {
   return (
     <div className="relative experience-card border p-4 bg-white z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
       <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold">
@@ -57,6 +58,13 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration }) =
         {duration}
       </span>
       <p className="text-gray-600 my-2">{desc}</p>
+      {
+        !!certificate &&
+        <HoverItemBlue><div className="hover:p-1">
+          <a href={certificate} target="_blank">See Certificate →</a>
+        </div>
+        </HoverItemBlue>
+      }
     </div>
   );
 };
