@@ -3,7 +3,7 @@ import ContainerBlock from "@components/ContainerBlock";
 import Blogs from "@components/Blogs"
 import { fetchMiscData } from "@lib/fetcher";
 
-export default function blogs({misc}) {
+export default function blogs({ misc }) {
   return (
     <ContainerBlock title="Blogs - William" misc={misc}>
       <Blogs />
@@ -16,6 +16,6 @@ export async function getServerSideProps() {
     const misc = await fetchMiscData()
     return { props: { misc } }
   } catch (err) {
-    return { props: {}}
+    return { props: {} }
   }
 }
