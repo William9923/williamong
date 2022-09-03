@@ -9,8 +9,8 @@ const meta = {
   description: `I've been developing software system from 2020 and will keep learning. Get in touch with me to know more about my journey...`,
   image: "/avatar.jpg",
   type: "website",
-  date: "2022"
-}
+  date: "2022",
+};
 
 export default function ContainerBlock({ children, misc, ...customMeta }) {
   const router = useRouter();
@@ -37,9 +37,7 @@ export default function ContainerBlock({ children, misc, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
-        <script>
-         0
-        </script>
+        <script>0</script>
       </Head>
       <main className="w-full">
         <Navbar />

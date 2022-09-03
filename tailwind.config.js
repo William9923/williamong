@@ -7,9 +7,9 @@ module.exports = {
     "./components/**/*.js",
     "./layouts/**/*.js",
     "./safelist.txt",
-    './src/**/*.{html,js}', 
+    "./src/**/*.{html,js}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    './node_modules/tw-elements/dist/js/**/*.js',
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   mode: "jit",
   theme: {
@@ -26,7 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('tw-elements/dist/plugin'),
-  ]
+  plugins: [require("tw-elements/dist/plugin")],
 };

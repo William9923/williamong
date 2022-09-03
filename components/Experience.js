@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Pinger from "@components/ui/Pinger";
 import PageTitle from "@components/PageTitle";
-import { HoverItemGreen, HoverItemBlue } from "@components/ui/HoverItem"
+import { HoverItemGreen, HoverItemBlue } from "@components/ui/HoverItem";
 
-
-const title = "Experience."
-const quotes = "Experience is the teacher of all things"
+const title = "Experience.";
+const quotes = "Experience is the teacher of all things";
 
 export default function Experience({ works, techs }) {
   return (
@@ -41,7 +40,15 @@ export default function Experience({ works, techs }) {
   );
 }
 
-const ExperienceCard = ({ title, desc, year, company, companyLink, duration, certificate }) => {
+const ExperienceCard = ({
+  title,
+  desc,
+  year,
+  company,
+  companyLink,
+  duration,
+  certificate,
+}) => {
   return (
     <div className="relative experience-card border p-4 bg-white z-10 mx-4 mb-4 shadow-xl hover:shadow rounded-md shadow-custom border-2 border-[#212121]">
       <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold">
@@ -49,24 +56,26 @@ const ExperienceCard = ({ title, desc, year, company, companyLink, duration, cer
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
       <HoverItemGreen>
-        <a href={companyLink} className="text-gray-500 hover:text-gray-50 pr-2 py-2 hover:pl-2">
+        <a
+          href={companyLink}
+          className="text-gray-500 hover:text-gray-50 pr-2 py-2 hover:pl-2"
+        >
           {company}
         </a>
       </HoverItemGreen>
-      |
-      <span className="text-gray-500 p-2">
-        {duration}
-      </span>
+      |<span className="text-gray-500 p-2">{duration}</span>
       <p className="text-gray-600 my-2">{desc}</p>
-      {
-        !!certificate &&
-        <HoverItemBlue><div className="hover:p-1">
-          <a href={certificate} target="_blank">See Certificate →</a>
-        </div>
+      {!!certificate && (
+        <HoverItemBlue>
+          <div className="hover:p-1">
+            <a href={certificate} target="_blank">
+              See Certificate →
+            </a>
+          </div>
         </HoverItemBlue>
-      }
+      )}
     </div>
   );
 };
 
-const checkLastElem = (idx, arr) => idx === arr.length - 1
+const checkLastElem = (idx, arr) => idx === arr.length - 1;

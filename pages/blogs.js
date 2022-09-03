@@ -1,6 +1,6 @@
 import React from "react";
 import ContainerBlock from "@components/ContainerBlock";
-import Blogs from "@components/Blogs"
+import Blogs from "@components/Blogs";
 import { fetchMiscData } from "@lib/fetcher";
 
 export default function blogs({ misc }) {
@@ -13,9 +13,9 @@ export default function blogs({ misc }) {
 
 export async function getServerSideProps() {
   try {
-    const misc = await fetchMiscData()
-    return { props: { misc } }
+    const misc = await fetchMiscData();
+    return { props: { misc } };
   } catch (err) {
-    return { props: {} }
+    return { props: {} };
   }
 }

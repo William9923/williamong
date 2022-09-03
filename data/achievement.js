@@ -1,10 +1,9 @@
 const achievement = [
-    {
-        title: "",
-        level: "",
-        desc: ""
-    }
-]
-
+  {
+    title: "",
+    level: "",
+    desc: "",
+  },
+];
 
 export default achievement;

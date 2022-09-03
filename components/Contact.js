@@ -1,16 +1,15 @@
 import React from "react";
 import PageTitle from "@components/PageTitle";
 import Divider from "@components/Divider";
-import SectionTitle from '@components/SectionTitle';
+import SectionTitle from "@components/SectionTitle";
 
-const title = "Contact Me!"
-const quotes = "Feel free to ask me about anything..."
+const title = "Contact Me!";
+const quotes = "Feel free to ask me about anything...";
 export default function Contact({ email, phoneNumber }) {
   return (
     <div className="bg-white flex flex-col justify-start" id="contact">
       <div className="max-w-6xl mx-auto bg-white">
         <SectionTitle title={title} />
-
       </div>
 
       <div className="flex flex-col md:flex-row my-10">
@@ -43,7 +42,7 @@ const WhatsAppContactInfo = ({ phoneNumber }) => (
       Chat on WhatsApp 💬
     </a>
   </div>
-)
+);
 
 const EmailContactInfo = ({ email }) => (
   <div className="flex flex-col mx-5 px-5">
@@ -51,7 +50,8 @@ const EmailContactInfo = ({ email }) => (
       Feel free to drop an email to me if you are interested to hire me!
     </h5>
     <p className="my-1 text-gray-800">
-      We can discuss about my skills and whether it will help your company/project!.
+      We can discuss about my skills and whether it will help your
+      company/project!.
     </p>
     <a
       href={`mailto:${email}?subject=I want to hire/learn more about you!`}
@@ -62,4 +62,4 @@ const EmailContactInfo = ({ email }) => (
       Go to Email ✈️
     </a>
   </div>
-)
+);

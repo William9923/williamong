@@ -2,8 +2,8 @@ import React from "react";
 import PageTitle from "@components/PageTitle";
 import ComingSoon from "@components/ComingSoon";
 
-const title = "Blogs"
-const quotes = "Because learning from the past is the key to the future"
+const title = "Blogs";
+const quotes = "Because learning from the past is the key to the future";
 export default function Blogs() {
   return (
     <div className="bg-white flex flex-col justify-center" id="blogs">
@@ -12,7 +12,6 @@ export default function Blogs() {
       </div>
       <div className="flex flex-col justify-center">
         <ComingSoon />
-        
       </div>
     </div>
   );
