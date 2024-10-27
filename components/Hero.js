@@ -42,21 +42,6 @@ export default function Hero({
               ))}
             </h2>
             <div className="flex flex-row justify-evenly mt-4">
-              <a href={profileDataUrl.resumeUrl} target="_blank">
-                <button
-                  type="button"
-                  className="inline-flex justify-center mx-4 my-2 px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                >
-                  <span className="hidden md:block">Resume Profile</span>
-                  <span className="block md:hidden">Resume</span>
-                  <span className="sr-only">Resume</span>
-                  <img
-                    src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/66/000000/external-resume-accounting-smashingstocks-detailed-outline-smashing-stocks.png"
-                    className="w-5 h-5 ml-2"
-                  />
-                </button>
-              </a>
-
               <a href={profileDataUrl.githubUrl} target="_blank">
                 <button
                   type="button"
