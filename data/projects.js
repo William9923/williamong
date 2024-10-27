@@ -1,5 +1,5 @@
 const projects = {
-  featured: [12, 13, 14],
+  featured: [16, 13, 14],
   upcoming: [],
   projects: [
     {
@@ -99,6 +99,22 @@ const projects = {
       link: "https://github.com/William9923/RedditVideoMakerBot",
       imgUrl: "https://miro.medium.com/max/1400/1*_tFFL4D1331iE_L8J9Oh1A.jpeg",
       tags: ["open-source", "python", "automation"],
+    },
+    {
+      idx: 15,
+      title: "gyarados.nvim",
+      desc: "An arctic, north-bluish clean and elegant on outside nvim configuration, but once you used it, you will go on a rampage.",
+      link: "https://github.com/William9923/gyarados.nvim",
+      imgUrl: "https://seeklogo.com/images/G/gyarados-logo-E0F15597D4-seeklogo.com.png",
+      tags: ["neovim", "lua", "ide"],
+    },
+    {
+      idx: 16,
+      title: "snorlax.nvim",
+      desc: "A fork of lazyvim for developer that are lazy to maintain neovim packages",
+      link: "https://github.com/William9923/snorlax.nvim",
+      imgUrl: "https://seeklogo.com/images/S/snorlax-logo-4B47B6B547-seeklogo.com.png",
+      tags: ["neovim", "lua", "ide"],
     },
   ],
 };
