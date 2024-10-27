@@ -25,7 +25,7 @@ export default function Achievement() {
           title="3rd rank, Gemastik Data Mining Competition (2019)"
           certificate={"/certificate/gemastik.pdf"}
         >
-        Build a deep learning model to separate different types of waste based on how they were processed using their image with Convolution Neural Network (CNN
+        Build a deep learning model to separate different types of waste based on how they were processed using their image with Convolution Neural Network (CNN)
         </Step>
         <Step title="Top 15, National Data Science Competition Shopee (2020).">
           Matching payment using fuzzy search & Create apriori algorithm to

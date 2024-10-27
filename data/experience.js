@@ -9,7 +9,6 @@ const experience = {
       companyLink: "https://www.xtremax.com/join-us",
       desc: "Contributed on building PAC (Press Accreditation Card) Website for Singapore Press and many more...",
       detail: [],
-      certificate: "/certificate/xtremax.pdf",
     },
     {
       idx: 2,
