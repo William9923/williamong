@@ -4,7 +4,7 @@
     <h2 align="center">William</h2>
   </a>
 </p> 
-<p align="center">An Aspiring <b>Software Engineer</b></p>
+<p align="center">A software engineer and lifelong learner who appreciates the beauty of simplicity. </p>
 
 
   <p align="center">
@@ -18,7 +18,6 @@
 
 <img src="public/demo.jpg"></img>
 
->*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer*
 
 ## ✨ Contents
 

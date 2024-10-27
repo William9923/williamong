@@ -14,7 +14,7 @@ export default function Education() {
       <Subtitle>Institut Teknologi Bandung</Subtitle>
       <ul>
         <Step title="Bachelor of Informatics (Computer Science) 🤘🏻">
-          Current GPA: 3.95/4.0
+          Current GPA: 3.95/4.0 . One of the top in the class of 2022
           <br />
           Period: Aug 2018 - July 2022
           <br />

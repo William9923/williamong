@@ -28,11 +28,8 @@ export default function Hero({
             </RainbowHighlight>{" "}
           </h1>
 
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-700 ml-4 my-2">
-            An aspiring &nbsp;
-            <UnderlineHighlight color={getRandomColor(colors)}>
-              Software Engineer.
-            </UnderlineHighlight>
+          <h1 className="text-xl md:text-2xl font-bold text-gray-700 ml-4 my-2">
+            A software engineer and lifelong learner
           </h1>
 
           <div className="ml-4 mb-16 mt-4">

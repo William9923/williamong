@@ -55,12 +55,22 @@ const experience = {
     },
     {
       idx: 6,
-      title: "Software Engineer (Backend)",
+      title: "Backend Software Engineer (SDE I)",
       company: "Shopee",
       year: "2022",
-      duration: "Aug (2022) - present",
+      duration: "Aug (2022) - Sept (2023)",
       companyLink: "https://www.shopee.co.id",
       desc: "Worked in Payment Processing Department. Helped develop and maintain various product related to payment in Shopee",
+      detail: [],
+    },
+    {
+      idx: 7,
+      title: "Software Engineer (SDE II)",
+      company: "Gojek",
+      year: "2023",
+      duration: "Sept (2023) - present",
+      companyLink: "https://blog.gojek.io/",
+      desc: "Worked on the Allocation Platform team, ensuring incoming orders are matched with the best possible supply (driver).",
       detail: [],
     },
   ],
@@ -96,16 +106,6 @@ const experience = {
         "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
     },
     {
-      name: "Next Js",
-      value:
-        "https://raw.githubusercontent.com/github/explore/28b02bbc9ad9f7a503c43775aebeb515dc2da5fc/topics/nextjs/nextjs.png",
-    },
-    {
-      name: "Flask",
-      value:
-        "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png",
-    },
-    {
       name: "Node Js",
       value:
         "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
@@ -121,31 +121,17 @@ const experience = {
         "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png",
     },
     {
-      name: "Mongo DB",
-      value:
-        "https://raw.githubusercontent.com/mongodb/mongo/b916a2ed3affa06b99ff57b0d13eed611232e04a/docs/leaf.svg",
-    },
-    {
-      name: "Redis (Cache)",
+      name: "Redis",
       value: "https://redis.io/images/redis-white.png",
     },
     {
-      name: "NSQ (Message Queue)",
+      name: "Kafka",
       value:
-        "https://camo.githubusercontent.com/35df65972dd10241edb2bdbd1f49f7f52b83f909b32d91f76aa6bd0c6b976ea5/68747470733a2f2f6e73712e696f2f7374617469632f696d672f6e73715f626c75652e706e67",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDCsnH-LecjXUO0ujaEgMSALxOVGEf_7KSZA&s",
     },
     {
       name: "Datadog (Monitor)",
       value: "https://www.drupal.org/files/datadog-logo-purple.png",
-    },
-    {
-      name: "Graylog",
-      value: "https://avatars.githubusercontent.com/u/474892?s=200&v=4",
-    },
-    {
-      name: "Machine Learning",
-      value:
-        "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/scikit-learn/scikit-learn.png",
     },
     {
       name: "Git",
