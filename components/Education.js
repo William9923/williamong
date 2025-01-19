@@ -20,7 +20,7 @@ export default function Education() {
           <br />
           <HoverItemBlack>
             <div className="hover:p-1">
-              <a href="/transcript.pdf" target="_blank">
+              <a href="/certificate/transcript.pdf" target="_blank">
                 See Transcript →
               </a>
             </div>
