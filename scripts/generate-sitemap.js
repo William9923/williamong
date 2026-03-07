@@ -1,7 +1,6 @@
-const fs = require("fs");
-
-const globby = require("globby");
-const prettier = require("prettier");
+import { createWriteStream } from "fs";
+import { globby } from "globby";
+import prettier from "prettier";
 
 (async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
@@ -34,11 +33,11 @@ const prettier = require("prettier");
         </urlset>
     `;
 
-  const formatted = prettier.format(sitemap, {
+  const formatted = await prettier.format(sitemap, {
     ...prettierConfig,
     parser: "html",
   });
 
   // eslint-disable-next-line no-sync
-  fs.writeFileSync("public/sitemap.xml", formatted);
+  createWriteStream("public/sitemap.xml").write(formatted);
 })();

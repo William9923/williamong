@@ -8,6 +8,9 @@
     "url": "https://willz-home.vercel.app/"
   },
   "private": true,
+  "engines": {
+    "node": ">=24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,27 +22,25 @@
     "os": false
   },
   "dependencies": {
-    "@headlessui/react": "^1.5.0",
     "@popperjs/core": "^2.11.5",
-    "axios": "^0.21.1",
-    "globby": "^3.0.0",
-    "next": "10.x",
-    "next-images": "^1.8.4",
-    "next-themes": "0.0.15",
-    "prettier": "^2.5.1",
-    "react": "17.x",
-    "react-dom": "17.x",
-    "react-icons": "^4.4.0",
+    "axios": "^1.7.0",
+    "globby": "^14.0.0",
+    "next": "^15.0.0",
+    "next-themes": "^0.4.0",
+    "prettier": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.0.0",
     "react-responsive-carousel": "^3.2.23",
     "react-rough-notation": "^1.0.1",
-    "tw-elements": "^1.0.0-alpha12"
+    "tw-elements": "^2.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.0-alpha.3",
-    "autoprefixer": "^10.4.2",
-    "husky": "^7.0.4",
-    "postcss": "^8.4.7",
-    "tailwindcss": "^3.0.23"
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.20",
+    "husky": "^9.0.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.0"
   },
   "husky": {
     "hooks": {
